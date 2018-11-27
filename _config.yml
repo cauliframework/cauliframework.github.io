@@ -44,7 +44,7 @@ plugins:
 
 
 # Permalinks
-permalink:        pretty
+permalink:        /blog/:title/
 
 # Setup
 title:            Cauli
@@ -61,3 +61,5 @@ version:          "1.0"
 
 github:
   repo:           https://github.com/cauliframework/cauli
+
+excerpt_separator: "<!-- more -->"
