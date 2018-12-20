@@ -1,0 +1,201 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/CauliURLProtocol.swift",
+      "line": null,
+      "symbol": "CauliURLProtocol",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/CauliURLProtocol.swift",
+      "line": 98,
+      "symbol": "CauliURLProtocol.urlSession(_:dataTask:didReceive:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/CauliURLProtocol.swift",
+      "line": 103,
+      "symbol": "CauliURLProtocol.urlSession(_:dataTask:didReceive:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/CauliURLProtocol.swift",
+      "line": 114,
+      "symbol": "CauliURLProtocol.urlSession(_:task:didCompleteWithError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/CauliURLProtocol.swift",
+      "line": 141,
+      "symbol": "CauliURLProtocol.urlSession(_:task:didFinishCollecting:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Configuration.swift",
+      "line": 25,
+      "symbol": "Configuration",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Florets/Inspector/InspectorFloret.swift",
+      "line": 25,
+      "symbol": "InspectorFloret",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Florets/Inspector/InspectorFloret.swift",
+      "line": 28,
+      "symbol": "InspectorFloret.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Florets/Mock/MockFloret.swift",
+      "line": null,
+      "symbol": "MockFloret",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Florets/Mock/MockFloret.swift",
+      "line": 25,
+      "symbol": "MockFloret",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Florets/Mock/MockFloret.swift",
+      "line": 27,
+      "symbol": "MockFloret.Mode",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Florets/Mock/MockFloret.swift",
+      "line": 28,
+      "symbol": "MockFloret.Mode.record",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Florets/Mock/MockFloret.swift",
+      "line": 29,
+      "symbol": "MockFloret.Mode.mock",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Florets/Mock/MockFloret.swift",
+      "line": 33,
+      "symbol": "MockFloret.mode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Florets/Mock/MockFloret.swift",
+      "line": 41,
+      "symbol": "MockFloret.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Florets/Mock/MockFloret.swift",
+      "line": 86,
+      "symbol": "MockFloret.MappingClosure",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Record.swift",
+      "line": 25,
+      "symbol": "Record",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Record.swift",
+      "line": 26,
+      "symbol": "Record.identifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Record.swift",
+      "line": 27,
+      "symbol": "Record.originalRequest",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Record.swift",
+      "line": 28,
+      "symbol": "Record.designatedRequest",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Record.swift",
+      "line": 29,
+      "symbol": "Record.result",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Record.swift",
+      "line": 30,
+      "symbol": "Record.requestStarted",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Record.swift",
+      "line": 31,
+      "symbol": "Record.responseRecieved",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Response.swift",
+      "line": 25,
+      "symbol": "Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Response.swift",
+      "line": 26,
+      "symbol": "Response.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Response.swift",
+      "line": 27,
+      "symbol": "Response.urlResponse",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Result.swift",
+      "line": 30,
+      "symbol": "Result.error(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Result.swift",
+      "line": 31,
+      "symbol": "Result.result(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/corneliushorstmann/Development/cauli"
+}
