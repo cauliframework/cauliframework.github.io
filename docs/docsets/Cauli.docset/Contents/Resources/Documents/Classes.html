@@ -23,7 +23,7 @@
         <a class="header-link" href="index.html">
           Cauli Docs
         </a>
-         (65% documented)
+         (76% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -69,6 +69,12 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/Cauli.html">Cauli</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/FindReplaceFloret.html">FindReplaceFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/FindReplaceFloret/RecordModifier.html">– RecordModifier</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/InspectorFloret.html">InspectorFloret</a>
@@ -199,6 +205,41 @@ Please check the Readme.md for more information.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:5Cauli17FindReplaceFloretC"></a>
+                    <a name="//apple_ref/swift/Class/FindReplaceFloret" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Cauli17FindReplaceFloretC">FindReplaceFloret</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A <code>FindReplaceFloret</code> uses <code>RecordModifier</code>s to modify a <code><a href="Structs/Record.html">Record</a></code>
+before sending a request and after receiving a response. Use multiple
+instances of the <code>FindReplaceFloret</code>s to group certain RecordModifiers
+under a given name.</p>
+
+                        <a href="Classes/FindReplaceFloret.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">FindReplaceFloret</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Floret.html">Floret</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:5Cauli15InspectorFloretC"></a>
                     <a name="//apple_ref/swift/Class/InspectorFloret" class="dashAnchor"></a>
                     <a class="token" href="#/s:5Cauli15InspectorFloretC">InspectorFloret</a>
@@ -241,7 +282,42 @@ Please check the Readme.md for more information.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The MockFloret helps you to easily mock your network requests
+for tests or to reproduce a bug.</p>
+<h2 id='recording-requests' class='heading'>Recording Requests</h2>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">mockFloret</span> <span class="o">=</span> <span class="kt">MockFloret</span><span class="p">(</span><span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="n">record</span><span class="p">)</span>
+</code></pre>
+
+<p>If you create your MockFloret in recording mode it will record
+all requests and their responses (depending on the Cauli configuration).
+They will be serialized and stored in the document directory.
+The exact path will be printed in the console as <q>`recoding to &hellip;`</q>.</p>
+<h2 id='mocking-requests' class='heading'>Mocking Requests</h2>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">mockFloret</span> <span class="o">=</span> <span class="kt">MockFloret</span><span class="p">(</span><span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="n">mock</span><span class="p">)</span>
+</code></pre>
+
+<p>If you create your MockFloret in mock mode it will search for a <code>MockFloret</code>
+folder in the bundle. If you used the record mode you can just copy over the
+recorded <code>MockFloret</code> folder. Make sure to select <q>Create folder references</q> if
+you drag the folder to Xcode.
+For every request the MockFloret will then search in this folder if there is any
+recorded response. If there are multiple it will return a random response.</p>
+<h2 id='manual-response-mapping' class='heading'>Manual Response Mapping</h2>
+
+<p>You can use the <code>addMapping</code> functions to manually map a request to a specific response.</p>
+<pre class="highlight swift"><code><span class="c1">// Maps all requests for the host cauli.works to the response</span>
+<span class="c1">// stored in the MockFloret/default/foo path.</span>
+<span class="n">addMapping</span> <span class="p">{</span> <span class="n">request</span><span class="p">,</span> <span class="n">mockFloret</span> <span class="k">in</span>
+    <span class="k">guard</span> <span class="n">request</span><span class="o">.</span><span class="n">url</span><span class="p">?</span><span class="o">.</span><span class="n">host</span> <span class="o">==</span> <span class="s">"cauli.works"</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">nil</span> <span class="p">}</span>
+    <span class="k">return</span> <span class="n">mockFloret</span><span class="o">.</span><span class="nf">resultForPath</span><span class="p">(</span><span class="s">"default/foo"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Maps all requests for the url path /api/florets to</span>
+<span class="c1">// a Not Found (404) response.</span>
+<span class="nf">addMapping</span><span class="p">(</span><span class="nv">forUrlPath</span><span class="p">:</span> <span class="s">"/api/florets"</span><span class="p">)</span> <span class="p">{</span> <span class="n">request</span><span class="p">,</span> <span class="n">_</span> <span class="k">in</span>
+    <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Response</span><span class="o">&gt;.</span><span class="nf">notFound</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">request</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
 
                         <a href="Classes/MockFloret.html" class="slightly-smaller">See more</a>
                       </div>
@@ -264,7 +340,7 @@ Please check the Readme.md for more information.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://cauli.works" target="_blank" rel="external">Cornelius Horstmann and Pascal Stüdlein</a>. All rights reserved. (Last updated: 2018-12-20)</p>
+      <p>&copy; 2019 <a class="link" href="https://cauli.works" target="_blank" rel="external">Cornelius Horstmann and Pascal Stüdlein</a>. All rights reserved. (Last updated: 2019-01-15)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

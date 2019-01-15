@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>NetworkServiceType Extension Reference</title>
+    <title>RecordModifier Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Extension/NetworkServiceType" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Struct/RecordModifier" class="dashAnchor"></a>
 
-    <a title="NetworkServiceType Extension Reference"></a>
+    <a title="RecordModifier Structure Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../../index.html">Cauli Reference</a>
       <img class="carat" src="../../img/carat.png" />
-      NetworkServiceType Extension Reference
+      RecordModifier Structure Reference
     </p>
 
     <div class="content-wrapper">
@@ -158,14 +158,15 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>NetworkServiceType</h1>
+            <h1>RecordModifier</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">URLRequest</span><span class="o">.</span><span class="kt">NetworkServiceType</span> <span class="o">=</span> <span class="kt">NSURLRequest</span><span class="o">.</span><span class="kt">NetworkServiceType</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RecordModifier</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>A RecordModifier defines the modification of a Record</p>
+
           </div>
         </section>
 
@@ -176,9 +177,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Se4fromxs7Decoder_p_tKcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Se4fromxs7Decoder_p_tKcfc">init(from:)</a>
+                    <a name="/s:5Cauli17FindReplaceFloretC14RecordModifierV7keyPath8modifierAEs011WritableKeyH0CyAA0E0VxG_xxctclufc"></a>
+                    <a name="//apple_ref/swift/Method/init(keyPath:modifier:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Cauli17FindReplaceFloretC14RecordModifierV7keyPath8modifierAEs011WritableKeyH0CyAA0E0VxG_xxctclufc">init(keyPath:modifier:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -186,25 +187,67 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>This init is based on a Records keyPath and allows just to modify
+a specific property of a Record.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">from</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">Decoder</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="k">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">keyPath</span><span class="p">:</span> <span class="kt">WritableKeyPath</span><span class="o">&lt;</span><span class="kt"><a href="../../Structs/Record.html">Record</a></span><span class="p">,</span> <span class="k">Type</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">modifier</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="k">Type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="k">Type</span><span class="p">))</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keyPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The keyPath describing which property of a Record should be modified.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>modifier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure used to modify the property defined by the keyPath.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A RecordModifier is modifying a specific property of a Record.
+       Used to initalize a FindReplaceFloret.</p>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:SE6encode2toys7Encoder_p_tKF"></a>
-                    <a name="//apple_ref/swift/Method/encode(to:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:SE6encode2toys7Encoder_p_tKF">encode(to:)</a>
+                    <a name="/s:5Cauli17FindReplaceFloretC14RecordModifierV9modifyUrl10expression8templateAESo19NSRegularExpressionC_SStFZ"></a>
+                    <a name="//apple_ref/swift/Method/modifyUrl(expression:template:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Cauli17FindReplaceFloretC14RecordModifierV9modifyUrl10expression8templateAESo19NSRegularExpressionC_SStFZ">modifyUrl(expression:template:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -212,15 +255,51 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>This init will modify the Requests URL.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">encode</span><span class="p">(</span><span class="n">to</span> <span class="nv">encoder</span><span class="p">:</span> <span class="kt">Encoder</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">modifyUrl</span><span class="p">(</span><span class="nv">expression</span><span class="p">:</span> <span class="kt">NSRegularExpression</span><span class="p">,</span> <span class="nv">template</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/FindReplaceFloret.html">FindReplaceFloret</a></span><span class="o">.</span><span class="kt">RecordModifier</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>expression</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A RegularExpression describing the part of the Requets URL to modify.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>template</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The substitution template used when replacing matching instances of the expression.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A RecordModifier is modifying the RequestURL. Used to initalize a FindReplaceFloret.</p>
                       </div>
                     </section>
                   </div>

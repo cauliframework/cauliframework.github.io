@@ -22,7 +22,7 @@
         <a class="header-link" href="index.html">
           Cauli Docs
         </a>
-         (65% documented)
+         (76% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -68,6 +68,12 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/Cauli.html">Cauli</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/FindReplaceFloret.html">FindReplaceFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/FindReplaceFloret/RecordModifier.html">– RecordModifier</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/InspectorFloret.html">InspectorFloret</a>
@@ -158,10 +164,13 @@
 <h2 id='instantiating-cauli' class='heading'>Instantiating Cauli</h2>
 
 <p>Please make sure you create your Cauli instance as early as possible, especially before any request is started so Cauli can intercept every request. If you don&rsquo;t want to start Cauli at the beginning just don&rsquo;t call the <code>run</code> function. Check the <a href="Architecture">Architecture</a> for more details.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">cauli</span> <span class="o">=</span> <span class="kt">Cauli</span><span class="p">([</span> <span class="kt">InspectorFloret</span><span class="p">()</span> <span class="p">],</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt">Configuration</span><span class="p">(</span><span class="nv">isShakeGestureEnabled</span><span class="p">:</span> <span class="kc">false</span><span class="p">))</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">Configuration</span><span class="p">(</span>
+  <span class="nv">recordSelector</span><span class="p">:</span> <span class="kt">RecordSelector</span><span class="o">.</span><span class="nf">max</span><span class="p">(</span><span class="nv">bytesize</span><span class="p">:</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">),</span>
+  <span class="nv">enableShakeGesture</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">cauli</span> <span class="o">=</span> <span class="kt">Cauli</span><span class="p">([</span> <span class="kt">InspectorFloret</span><span class="p">()</span> <span class="p">],</span> <span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
 </code></pre>
 
-<p>Please check the <a href="https://cauli.works/docs/Structs.html#/s:5Cauli13ConfigurationV">Docs</a> for all configuration options.</p>
+<p>Please check the <a href="https://cauli.works/docs/Structs/Configuration.html">Docs</a> for all configuration options.</p>
 <h2 id='start-stop-cauli' class='heading'>Start / Stop Cauli</h2>
 <pre class="highlight swift"><code><span class="n">cauli</span><span class="o">.</span><span class="nf">run</span><span class="p">()</span>
 <span class="n">cauli</span><span class="o">.</span><span class="nf">pause</span><span class="p">()</span>
@@ -170,7 +179,10 @@
 
 <p>If you don&rsquo;t want to use the shake gesture you can display the Cauli UI manually.</p>
 <pre class="highlight swift"><code><span class="c1">// Disable the shake gesture using the Configuration</span>
-<span class="k">let</span> <span class="nv">cauli</span> <span class="o">=</span> <span class="kt">Cauli</span><span class="p">([</span> <span class="kt">InspectorFloret</span><span class="p">()</span> <span class="p">],</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt">Configuration</span><span class="p">(</span><span class="nv">isShakeGestureEnabled</span><span class="p">:</span> <span class="kc">false</span><span class="p">))</span>
+<span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">Configuration</span><span class="p">(</span>
+  <span class="nv">recordSelector</span><span class="p">:</span> <span class="kt">RecordSelector</span><span class="o">.</span><span class="nf">max</span><span class="p">(</span><span class="nv">bytesize</span><span class="p">:</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">),</span>
+  <span class="nv">enableShakeGesture</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">cauli</span> <span class="o">=</span> <span class="kt">Cauli</span><span class="p">([</span> <span class="kt">InspectorFloret</span><span class="p">()</span> <span class="p">],</span> <span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
 
 <span class="c1">// Create the Cauli ViewController to display it manually</span>
 <span class="k">let</span> <span class="nv">cauliViewController</span> <span class="o">=</span> <span class="n">cauli</span><span class="o">.</span><span class="nf">viewController</span><span class="p">()</span>
@@ -183,7 +195,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://cauli.works" target="_blank" rel="external">Cornelius Horstmann and Pascal Stüdlein</a>. All rights reserved. (Last updated: 2018-12-20)</p>
+      <p>&copy; 2019 <a class="link" href="https://cauli.works" target="_blank" rel="external">Cornelius Horstmann and Pascal Stüdlein</a>. All rights reserved. (Last updated: 2019-01-15)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
