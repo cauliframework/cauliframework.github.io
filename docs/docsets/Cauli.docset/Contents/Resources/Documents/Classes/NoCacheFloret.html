@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>URLRequest Extension Reference</title>
+    <title>NoCacheFloret Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Extension/URLRequest" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Class/NoCacheFloret" class="dashAnchor"></a>
 
-    <a title="URLRequest Extension Reference"></a>
+    <a title="NoCacheFloret Class Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Cauli Reference</a>
       <img class="carat" src="../img/carat.png" />
-      URLRequest Extension Reference
+      NoCacheFloret Class Reference
     </p>
 
     <div class="content-wrapper">
@@ -173,14 +173,34 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>URLRequest</h1>
+            <h1>NoCacheFloret</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">URLRequest</span> <span class="p">:</span> <span class="kt">ReferenceConvertible</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NoCacheFloret</span> <span class="p">:</span> <span class="kt"><a href="../Classes/FindReplaceFloret.html">FindReplaceFloret</a></span></code></pre>
 
                 </div>
               </div>
-            
+            <p>The NoCacheFloret modifies the desigantedRequest and the response of a record
+to prevent returning cached data or writing data to the cache.</p>
+
+<p>On the designatedRequest it will:</p>
+
+<ul>
+<li>change the <strong>cachePolicy</strong> to <strong>.reloadIgnoringLocalCacheData</strong></li>
+<li><strong>remove</strong> the value for the <strong>If-Modified-Since</strong> key on allHTTPHeaderFields</li>
+<li><strong>remove</strong> the value for the <strong>If-None-Match</strong> key on allHTTPHeaderFields</li>
+<li>change <strong>Cache-Control</strong> to <strong>no-cache</strong></li>
+</ul>
+
+<p>On the response it will:</p>
+
+<ul>
+<li><strong>remove</strong> the value for the <strong>Last-Modified</strong> key on allHTTPHeaderFields</li>
+<li><strong>remove</strong> the value for the <strong>ETag</strong> key on allHTTPHeaderFields</li>
+<li>change <strong>Expires</strong> to <strong>0</strong></li>
+<li>change <strong>Cache-Control</strong> to <strong>no-cache</strong></li>
+</ul>
+
           </div>
         </section>
 
@@ -191,9 +211,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Se4fromxs7Decoder_p_tKcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Se4fromxs7Decoder_p_tKcfc">init(from:)</a>
+                    <a name="/s:5Cauli13NoCacheFloretCACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Cauli13NoCacheFloretCACycfc">init()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -201,97 +221,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">from</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">Decoder</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                        <p>Undocumented</p>
 
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:SE6encode2toys7Encoder_p_tKF"></a>
-                    <a name="//apple_ref/swift/Method/encode(to:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:SE6encode2toys7Encoder_p_tKF">encode(to:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">encode</span><span class="p">(</span><span class="n">to</span> <span class="nv">encoder</span><span class="p">:</span> <span class="kt">Encoder</span><span class="p">)</span> <span class="k">throws</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10Foundation10URLRequestV11CachePolicya"></a>
-                    <a name="//apple_ref/swift/Extension/CachePolicy" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation10URLRequestV11CachePolicya">CachePolicy</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="../Extensions/URLRequest/CachePolicy.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">URLRequest</span><span class="o">.</span><span class="kt">CachePolicy</span> <span class="o">=</span> <span class="kt">NSURLRequest</span><span class="o">.</span><span class="kt">CachePolicy</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10Foundation10URLRequestV18NetworkServiceTypea"></a>
-                    <a name="//apple_ref/swift/Extension/NetworkServiceType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation10URLRequestV18NetworkServiceTypea">NetworkServiceType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="../Extensions/URLRequest/NetworkServiceType.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">URLRequest</span><span class="o">.</span><span class="kt">NetworkServiceType</span> <span class="o">=</span> <span class="kt">NSURLRequest</span><span class="o">.</span><span class="kt">NetworkServiceType</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>

@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Cauli Docs
         </a>
-         (76% documented)
+         (81% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -60,6 +60,12 @@
                 <a class="nav-group-task-link" href="../configuring-cauli.html">Configuring Cauli</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../florets.html">Florets</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../frequently-asked-questions.html">Frequently Asked Questions</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../writing-your-own-plugin.html">Writing Your Own Plugin</a>
               </li>
             </ul>
@@ -88,6 +94,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MockFloret.html#/s:5Cauli10MockFloretC7MappingV">– Mapping</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NoCacheFloret.html">NoCacheFloret</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -95,6 +104,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/Result.html">Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/StorageCapacity.html">StorageCapacity</a>
               </li>
             </ul>
           </li>
@@ -127,6 +139,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Displayable.html">Displayable</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/Floret.html">Floret</a>
               </li>
@@ -194,8 +209,9 @@ The <code><a href="../Structs/Configuration.html#/s:5Cauli13ConfigurationV8stand
 <li>Configuration:
 
 <ul>
-<li>recordSelector: Only records to a maximum of 10 MB are considered.</li>
+<li>recordSelector: Only records to a maximum of 5 MB are considered.</li>
 <li>enableShakeGesture: The shake gesture is enabled.</li>
+<li>storageCapacity: The storage capacity is limited to 50 records,.</li>
 </ul></li>
 </ul>
 
@@ -279,9 +295,36 @@ use the <code><a href="../Classes/Cauli.html#/s:5CauliAAC14viewControllerSo06UIV
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Cauli13ConfigurationV14recordSelector18enableShakeGestureAcA06RecordD0V_Sbtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(recordSelector:enableShakeGesture:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Cauli13ConfigurationV14recordSelector18enableShakeGestureAcA06RecordD0V_Sbtcfc">init(recordSelector:enableShakeGesture:)</a>
+                    <a name="/s:5Cauli13ConfigurationV15storageCapacityAA07StorageD0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/storageCapacity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Cauli13ConfigurationV15storageCapacityAA07StorageD0Ovp">storageCapacity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code>storageCapacity</code> defines the capacity of the storage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">storageCapacity</span><span class="p">:</span> <span class="kt"><a href="../Enums/StorageCapacity.html">StorageCapacity</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Cauli13ConfigurationV14recordSelector18enableShakeGesture15storageCapacityAcA06RecordD0V_SbAA07StorageI0Otcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(recordSelector:enableShakeGesture:storageCapacity:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Cauli13ConfigurationV14recordSelector18enableShakeGesture15storageCapacityAcA06RecordD0V_SbAA07StorageI0Otcfc">init(recordSelector:enableShakeGesture:storageCapacity:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -297,7 +340,7 @@ properties of a <code>Configuration</code> for their meaning.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">recordSelector</span><span class="p">:</span> <span class="kt"><a href="../Structs/RecordSelector.html">RecordSelector</a></span><span class="p">,</span> <span class="nv">enableShakeGesture</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">recordSelector</span><span class="p">:</span> <span class="kt"><a href="../Structs/RecordSelector.html">RecordSelector</a></span><span class="p">,</span> <span class="nv">enableShakeGesture</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">storageCapacity</span><span class="p">:</span> <span class="kt"><a href="../Enums/StorageCapacity.html">StorageCapacity</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -312,7 +355,7 @@ properties of a <code>Configuration</code> for their meaning.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="https://cauli.works" target="_blank" rel="external">Cornelius Horstmann and Pascal Stüdlein</a>. All rights reserved. (Last updated: 2019-01-15)</p>
+      <p>&copy; 2019 <a class="link" href="https://cauli.works" target="_blank" rel="external">Cornelius Horstmann and Pascal Stüdlein</a>. All rights reserved. (Last updated: 2019-01-27)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

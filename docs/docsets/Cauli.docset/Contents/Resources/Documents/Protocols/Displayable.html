@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>URLRequest Extension Reference</title>
+    <title>Displayable Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Extension/URLRequest" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Protocol/Displayable" class="dashAnchor"></a>
 
-    <a title="URLRequest Extension Reference"></a>
+    <a title="Displayable Protocol Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Cauli Reference</a>
       <img class="carat" src="../img/carat.png" />
-      URLRequest Extension Reference
+      Displayable Protocol Reference
     </p>
 
     <div class="content-wrapper">
@@ -173,14 +173,16 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>URLRequest</h1>
+            <h1>Displayable</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">URLRequest</span> <span class="p">:</span> <span class="kt">ReferenceConvertible</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Displayable</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>A Displayable provides a ViewController for settings or to display any information.
+It usually is used in combination with a Floret</p>
+
           </div>
         </section>
 
@@ -191,9 +193,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Se4fromxs7Decoder_p_tKcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Se4fromxs7Decoder_p_tKcfc">init(from:)</a>
+                    <a name="/s:5Cauli11DisplayableP14viewControllerySo06UIViewD0CA2ACF"></a>
+                    <a name="//apple_ref/swift/Method/viewController(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Cauli11DisplayableP14viewControllerySo06UIViewD0CA2ACF">viewController(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -201,99 +203,44 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>This function is called whenever the Cauli UI will be displayed.
+If a Floret needs any UI for configuration or to display data you
+can return a ViewController here.</p>
+
+<p>The default implementation returns nil.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">from</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">Decoder</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">viewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">cauli</span><span class="p">:</span> <span class="kt"><a href="../Classes/Cauli.html">Cauli</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIViewController</span></code></pre>
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:SE6encode2toys7Encoder_p_tKF"></a>
-                    <a name="//apple_ref/swift/Method/encode(to:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:SE6encode2toys7Encoder_p_tKF">encode(to:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cauli</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Cauli instance this floret will be displayed in. Use this
+instance to access the storage for example.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">encode</span><span class="p">(</span><span class="n">to</span> <span class="nv">encoder</span><span class="p">:</span> <span class="kt">Encoder</span><span class="p">)</span> <span class="k">throws</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10Foundation10URLRequestV11CachePolicya"></a>
-                    <a name="//apple_ref/swift/Extension/CachePolicy" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation10URLRequestV11CachePolicya">CachePolicy</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="../Extensions/URLRequest/CachePolicy.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">URLRequest</span><span class="o">.</span><span class="kt">CachePolicy</span> <span class="o">=</span> <span class="kt">NSURLRequest</span><span class="o">.</span><span class="kt">CachePolicy</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10Foundation10URLRequestV18NetworkServiceTypea"></a>
-                    <a name="//apple_ref/swift/Extension/NetworkServiceType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation10URLRequestV18NetworkServiceTypea">NetworkServiceType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="../Extensions/URLRequest/NetworkServiceType.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">URLRequest</span><span class="o">.</span><span class="kt">NetworkServiceType</span> <span class="o">=</span> <span class="kt">NSURLRequest</span><span class="o">.</span><span class="kt">NetworkServiceType</span></code></pre>
-
-                        </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Return a Floret specific ViewController or <code>nil</code> if there is none.</p>
                       </div>
                     </section>
                   </div>

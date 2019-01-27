@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Cauli Docs
         </a>
-         (76% documented)
+         (81% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -60,6 +60,12 @@
                 <a class="nav-group-task-link" href="../configuring-cauli.html">Configuring Cauli</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../florets.html">Florets</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../frequently-asked-questions.html">Frequently Asked Questions</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../writing-your-own-plugin.html">Writing Your Own Plugin</a>
               </li>
             </ul>
@@ -88,6 +94,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MockFloret.html#/s:5Cauli10MockFloretC7MappingV">– Mapping</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NoCacheFloret.html">NoCacheFloret</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -95,6 +104,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/Result.html">Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/StorageCapacity.html">StorageCapacity</a>
               </li>
             </ul>
           </li>
@@ -127,6 +139,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Displayable.html">Displayable</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/Floret.html">Floret</a>
               </li>
@@ -166,8 +181,7 @@
                 </div>
               </div>
             <p>A Floret defines a Cauli plugin. It can be used to intercept and modify
-network Requests as well as Responses and to provide a ViewController for
-settings or just to display information.</p>
+network Requests as well as Responses.</p>
 
           </div>
         </section>
@@ -235,68 +249,6 @@ not be called anymore. A Floret doesn&rsquo;t need to perform any specific actio
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5Cauli6FloretP14viewControllerySo06UIViewD0CSgA2ACF"></a>
-                    <a name="//apple_ref/swift/Method/viewController(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Cauli6FloretP14viewControllerySo06UIViewD0CSgA2ACF">viewController(_:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This function is called whenever the Cauli UI will be displayed.
-If a Floret needs any UI for configuration or to display data you
-can return a ViewController here.</p>
-
-<p>The default implementation returns nil.</p>
-
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">viewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">cauli</span><span class="p">:</span> <span class="kt"><a href="../Classes/Cauli.html">Cauli</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIViewController</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>cauli</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The Cauli instance this floret will be displayed in. Use this
-instance to access the storage for example.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Return a Floret specific ViewController or <code>nil</code> if there is none.</p>
                       </div>
                     </section>
                   </div>
@@ -444,7 +396,7 @@ original or modified <code><a href="../Structs/Record.html">Record</a></code>.</
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="https://cauli.works" target="_blank" rel="external">Cornelius Horstmann and Pascal Stüdlein</a>. All rights reserved. (Last updated: 2019-01-15)</p>
+      <p>&copy; 2019 <a class="link" href="https://cauli.works" target="_blank" rel="external">Cornelius Horstmann and Pascal Stüdlein</a>. All rights reserved. (Last updated: 2019-01-27)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

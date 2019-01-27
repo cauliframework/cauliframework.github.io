@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Cauli  Reference</title>
+    <title>Florets  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset="utf-8">
@@ -15,7 +15,7 @@
   <body>
 
 
-    <a title="Cauli  Reference"></a>
+    <a title="Florets  Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -43,7 +43,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="index.html">Cauli Reference</a>
       <img class="carat" src="img/carat.png" />
-      Cauli  Reference
+      Florets  Reference
     </p>
 
     <div class="content-wrapper">
@@ -173,57 +173,19 @@
         <section class="section">
           <div class="section-content">
             
-            <h1 id='img-src-https-cauli-works-logo-png-alt-cauli' class='heading'><img src="https://cauli.works/logo.png" alt="Cauli"></h1>
+            <h1 id='florets' class='heading'>Florets</h1>
+<h2 id='inspectorfloret' class='heading'>InspectorFloret</h2>
 
-<p><a href="https://cocoapods.org/pods/Cauli"><img src="https://img.shields.io/cocoapods/v/Cauli.svg?style=flat-square" alt="CocoaPods Compatible"></a> 
-<a href="https://github.com/cauliframework/cauli/blob/develop/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License MIT"></a></p>
+<p>The <a href="https://cauli.works/docs/Classes/InspectorFloret.html">InspectorFloret</a> lets you browse through and share your requests and responses from within the application. Just shake your device (if you are using the default configuration).</p>
+<h2 id='mockfloret' class='heading'>MockFloret</h2>
 
-<p>Cauli is a network debugging framework featuring a plugin infrastructure to hook into selected request and responses as well as recording and displaying performed requests.</p>
+<p>The <a href="https://cauli.works/docs/Classes/MockFloret.html">MockFloret</a> helps you to easily mock your network requests for tests or to reproduce a bug. You can can use it to record the responses for later mocking and even is compatible to the Format used in the <a href="https://cauli.works/docs/Classes/InspectorFloret.html">InspectorFloret</a>.</p>
+<h2 id='nocachefloret' class='heading'>NoCacheFloret</h2>
 
-<p><strong>Cauli is designed for developing purposes. Even if it doesn&rsquo;t use any private API we recommend against using it in a production environment.</strong></p>
-<h2 id='getting-started' class='heading'>Getting Started</h2>
-<h3 id='installation' class='heading'>Installation</h3>
-<h4 id='a-href-https-cocoapods-org-cocoapods-a' class='heading'><a href="https://cocoapods.org">CocoaPods</a></h4>
+<p>The <a href="https://cauli.works/docs/Classes/NoCacheFloret.html">NoCacheFloret</a> modifies the designatedRequest and the response of a record to prevent returning cached data or writing data to the cache.</p>
+<h2 id='findreplacefloret' class='heading'>FindReplaceFloret</h2>
 
-<p>Use the following in your Podfile.</p>
-<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'Cauli'</span><span class="p">,</span> <span class="s1">'~&gt; 1.0'</span>
-</code></pre>
-
-<p>Then run <code>pod install</code>. </p>
-<h4 id='carthage' class='heading'>Carthage</h4>
-
-<p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a non intrusive way to install Cauli to your project. It makes no changes to your Xcode project and workspace. Add the following to your Cartfile:</p>
-<pre class="highlight swift"><code><span class="n">github</span> <span class="s">"cauliframework/cauli"</span>
-</code></pre>
-<h3 id='setup' class='heading'>Setup</h3>
-
-<p>Add an <code>import Cauli</code> to your <code>AppDelegate</code> and call the <code>run</code> function on the shared instace in the <code>application(:, didFinishLaunchingWithOptions:)</code>.</p>
-<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Cauli</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">AppDelegate</span><span class="p">:</span> <span class="kt">UIApplicationDelegate</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplicationLaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
-        <span class="kt">Cauli</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">run</span><span class="p">()</span>
-        <span class="c1">// perform your usual application setup</span>
-        <span class="k">return</span> <span class="kc">true</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
-
-<p>This will configure Cauli to hook into every request, setup the core florets (plugins) (<a href="https://cauli.works/docs/Classes/InspectorFloret.html">InspectorFloret</a>) and configures a shake gesture for the Cauli UI.</p>
-<h3 id='documentation' class='heading'>Documentation</h3>
-
-<ul>
-<li><a href="https://cauli.works/docs/architecture.html">Architecture</a></li>
-<li><a href="https://cauli.works/docs/configuring-cauli.html">Configuring Cauli</a></li>
-<li><a href="https://cauli.works/docs/writing-your-own-plugin.html">Writing Your Own Plugin</a></li>
-<li><a href="https://cauli.works/docs/frequently-asked-questions.html">Frequently Asked Questions</a></li>
-</ul>
-<h2 id='contributing' class='heading'>Contributing</h2>
-
-<p>Please read <a href="CONTRIBUTING.md">CONTRIBUTING</a> for details.</p>
-<h2 id='license' class='heading'>License</h2>
-
-<p>Cauli is available under the <a href="LICENSE">MIT license</a>.</p>
+<p>The <a href="https://cauli.works/docs/Classes/FindReplaceFloret.html">FindReplaceFloret</a> can be used to easily replace any part of a request or response by using a <a href="https://cauli.works/docs/Classes/FindReplaceFloret/RecordModifier.html">RecordModifier</a></p>
 
           </div>
         </section>

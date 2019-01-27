@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Cauli Docs
         </a>
-         (76% documented)
+         (81% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -60,6 +60,12 @@
                 <a class="nav-group-task-link" href="../configuring-cauli.html">Configuring Cauli</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../florets.html">Florets</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../frequently-asked-questions.html">Frequently Asked Questions</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../writing-your-own-plugin.html">Writing Your Own Plugin</a>
               </li>
             </ul>
@@ -88,6 +94,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MockFloret.html#/s:5Cauli10MockFloretC7MappingV">– Mapping</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NoCacheFloret.html">NoCacheFloret</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -95,6 +104,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/Result.html">Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/StorageCapacity.html">StorageCapacity</a>
               </li>
             </ul>
           </li>
@@ -127,6 +139,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Displayable.html">Displayable</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/Floret.html">Floret</a>
               </li>
@@ -238,9 +253,9 @@ recorded response. If there are multiple it will return a random response.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Cauli10MockFloretC4mode12forceMockingA2C4ModeO_Sbtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(mode:forceMocking:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Cauli10MockFloretC4mode12forceMockingA2C4ModeO_Sbtcfc">init(mode:forceMocking:)</a>
+                    <a name="/s:5Cauli10MockFloretC4modeA2C4ModeO_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(mode:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Cauli10MockFloretC4modeA2C4ModeO_tcfc">init(mode:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -255,7 +270,7 @@ recorded response. If there are multiple it will return a random response.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">mode</span><span class="p">:</span> <span class="kt"><a href="../Classes/MockFloret/Mode.html">Mode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">mock</span><span class="p">,</span> <span class="nv">forceMocking</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">mode</span><span class="p">:</span> <span class="kt"><a href="../Classes/MockFloret/Mode.html">Mode</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">mock</span><span class="p">(</span><span class="nv">forced</span><span class="p">:</span> <span class="kc">false</span><span class="p">))</span></code></pre>
 
                         </div>
                       </div>
@@ -272,20 +287,6 @@ recorded response. If there are multiple it will return a random response.</p>
                               <td>
                                 <div>
                                   <p>The <code><a href="../Classes/MockFloret/Mode.html">Mode</a></code> of this MockFloret.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>forceMocking</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Defines the behaviour if no response is found.
-If false, the request will be ignored by the <code>MockFloret</code>.
-If true, the request will be answered with a 404-not-found response.</p>
                                 </div>
                               </td>
                             </tr>
@@ -676,7 +677,10 @@ it does nothing.</p>
 <li>record: In record mode the MockFloret will record all (depending on the
 Cauli configuration) requests, serialize and store them in the documents folder.</li>
 <li>mock: In mock mode the MockFloret will search for a <q>MockFloret</q> folder in the Bundle
-and tries to map all requests to a response stored in that folder.</li>
+and tries to map all requests to a response stored in that folder.
+Forced defines the behaviour if no response is found.
+If forced is false, the request will be ignored by the <code><a href="../Classes/MockFloret.html">MockFloret</a></code>.
+If forced is true, the request will be answered with a 404-not-found response.</li>
 </ul>
 
                         <a href="../Classes/MockFloret/Mode.html" class="slightly-smaller">See more</a>
@@ -685,7 +689,7 @@ and tries to map all requests to a response stored in that folder.</li>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Mode</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Mode</span> <span class="p">:</span> <span class="kt">Equatable</span></code></pre>
 
                         </div>
                       </div>
@@ -734,7 +738,7 @@ used to remove a Mapping via <code>removeMapping</code>.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="https://cauli.works" target="_blank" rel="external">Cornelius Horstmann and Pascal Stüdlein</a>. All rights reserved. (Last updated: 2019-01-15)</p>
+      <p>&copy; 2019 <a class="link" href="https://cauli.works" target="_blank" rel="external">Cornelius Horstmann and Pascal Stüdlein</a>. All rights reserved. (Last updated: 2019-01-27)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
