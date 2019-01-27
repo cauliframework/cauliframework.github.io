@@ -57,7 +57,7 @@ paginate:         5
 paginate_path:    "/blog/page:num/"
 
 # Custom vars
-version:          "1.0.0 pre alpha"
+version:          "0.9 (alpha)"
 
 github:
   repo:           https://github.com/cauliframework/cauli
