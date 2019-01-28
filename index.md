@@ -5,22 +5,28 @@ title: Home
 
 # Cauli
 
-Cauli is a network debugging framework featuring a plugin infrastructure to hook into selected request and responses as well as recording and displaying performed requests.
+Cauli is a network debugging framework featuring a plugin infrastructure to hook into selected request and responses as well as recording and displaying performed requests. It provides a wide range of possibilities. For example from [inspecting](https://cauli.works/docs/florets.html#InspectorFloret) network traffic to [mock](https://cauli.works/docs/florets.html#MockFloret) UnitTests. Missing something fancy? How about [writing your own Plugin](https://cauli.works/docs/writing-your-own-plugin.html).
 
-**Cauli is designed for developing purposes. Even if it doesn't use any private API we recommend against using it in a production environment.**
+## Features
 
-## Installation
-### [CocoaPods](https://cocoapods.org)
+🌏 Hooks into the [URL Loading System](https://cauli.works/docs/frequently-asked-questions.html)  
+🧩 [Existing](https://cauli.works/docs/florets.html) set of Plugins (Florets)  
+🔧 [Extensible](https://cauli.works/docs/writing-your-own-plugin.html) Plugin Infrastructure
+
+## Getting Started
+
+### Installation
+#### [CocoaPods](https://cocoapods.org)
 
 Use the following in your Podfile.
 
 ```ruby
-pod 'Cauli', '~> 1.0'
+pod 'Cauli', git: 'https://github.com/cauliframework/cauli.git', branch: 'develop'
 ```
 
-Then run `pod install`. 
+Then run `pod install`.
 
-### Carthage
+#### Carthage
 
 [Carthage](https://github.com/Carthage/Carthage) is a non intrusive way to install Cauli to your project. It makes no changes to your Xcode project and workspace. Add the following to your Cartfile:
 
@@ -44,4 +50,4 @@ public class AppDelegate: UIApplicationDelegate {
 }
 ```
 
-This will configure Cauli to hook into every request, setup a some plugins ([InspectorFloret](https://cauli.works/docs/Classes/InspectorFloret.html) and [MockFloret](https://cauli.works/docs/Classes/MockFloret.html)) and configures a shake gesture for the Cauli UI.
+This will configure Cauli to hook into every request, setup the core florets (plugins) ([InspectorFloret](https://cauli.works/docs/Classes/InspectorFloret.html)) and configures a shake gesture for the Cauli UI.
