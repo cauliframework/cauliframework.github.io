@@ -21,7 +21,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          Cauliframework Docs
+          Cauliframework 1.0.1 Docs
         </a>
          (100% documented)
       </p>
@@ -166,10 +166,11 @@
       <article class="main-content">
 
         <section class="section">
-          <div class="section-content">
+          <div class="section-content top-matter">
             <h1>MockFloret</h1>
               <div class="declaration">
                 <div class="language">
+                  
                   <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">MockFloret</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/InterceptingFloret.html">InterceptingFloret</a></span></code></pre>
 
                 </div>
@@ -183,14 +184,14 @@ for tests or to reproduce a bug.</p>
 <p>If you create your MockFloret in recording mode it will record
 all requests and their responses (depending on the Cauli configuration).
 They will be serialized and stored in the document directory.
-The exact path will be printed in the console as <q>`recoding to &hellip;`</q>.</p>
+The exact path will be printed in the console as &ldquo;<code>recoding to ...</code>&rdquo;.</p>
 <h2 id='mocking-requests' class='heading'>Mocking Requests</h2>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">mockFloret</span> <span class="o">=</span> <span class="kt">MockFloret</span><span class="p">(</span><span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="n">mock</span><span class="p">)</span>
 </code></pre>
 
 <p>If you create your MockFloret in mock mode it will search for a <code>MockFloret</code>
 folder in the bundle. If you used the record mode you can just copy over the
-recorded <code>MockFloret</code> folder. Make sure to select <q>Create folder references</q> if
+recorded <code>MockFloret</code> folder. Make sure to select &ldquo;Create folder references&rdquo; if
 you drag the folder to Xcode.
 For every request the MockFloret will then search in this folder if there is any
 recorded response. If there are multiple it will return a random response.</p>
@@ -247,9 +248,35 @@ recorded response. If there are multiple it will return a random response.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:14Cauliframework6FloretP11descriptionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework6FloretP11descriptionSSSgvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:14Cauliframework10MockFloretC4modeA2C4ModeO_tcfc"></a>
                     <a name="//apple_ref/swift/Method/init(mode:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14Cauliframework10MockFloretC4modeA2C4ModeO_tcfc">init(mode:)</a>
+                    <a class="token" href="#/s:14Cauliframework10MockFloretC4modeA2C4ModeO_tcfc">init(mode:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -295,7 +322,7 @@ recorded response. If there are multiple it will return a random response.</p>
                     <code>
                     <a name="/s:14Cauliframework18InterceptingFloretP11willRequest_29modificationCompletionHandleryAA6RecordV_yAGctF"></a>
                     <a name="//apple_ref/swift/Method/willRequest(_:modificationCompletionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14Cauliframework18InterceptingFloretP11willRequest_29modificationCompletionHandleryAA6RecordV_yAGctF">willRequest(_:modificationCompletionHandler:)</a>
+                    <a class="token" href="#/s:14Cauliframework18InterceptingFloretP11willRequest_29modificationCompletionHandleryAA6RecordV_yAGctF">willRequest(_:<wbr>modificationCompletionHandler:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -321,7 +348,7 @@ recorded response. If there are multiple it will return a random response.</p>
                     <code>
                     <a name="/s:14Cauliframework18InterceptingFloretP10didRespond_29modificationCompletionHandleryAA6RecordV_yAGctF"></a>
                     <a name="//apple_ref/swift/Method/didRespond(_:modificationCompletionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14Cauliframework18InterceptingFloretP10didRespond_29modificationCompletionHandleryAA6RecordV_yAGctF">didRespond(_:modificationCompletionHandler:)</a>
+                    <a class="token" href="#/s:14Cauliframework18InterceptingFloretP10didRespond_29modificationCompletionHandleryAA6RecordV_yAGctF">didRespond(_:<wbr>modificationCompletionHandler:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -347,7 +374,7 @@ recorded response. If there are multiple it will return a random response.</p>
                     <code>
                     <a name="/s:14Cauliframework10MockFloretC13resultForPathyAA6ResultOyAA8ResponseVGSgSSF"></a>
                     <a name="//apple_ref/swift/Method/resultForPath(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14Cauliframework10MockFloretC13resultForPathyAA6ResultOyAA8ResponseVGSgSSF">resultForPath(_:)</a>
+                    <a class="token" href="#/s:14Cauliframework10MockFloretC13resultForPathyAA6ResultOyAA8ResponseVGSgSSF">resultForPath(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -379,7 +406,7 @@ bundle) to decode a Result by a given path.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The path of a record relative to the <q>MockFloret</q> folder.</p>
+                                  <p>The path of a record relative to the &ldquo;MockFloret&rdquo; folder.</p>
                                 </div>
                               </td>
                             </tr>
@@ -425,7 +452,7 @@ bundle) to decode a Result by a given path.</p>
                     <code>
                     <a name="/s:14Cauliframework10MockFloretC10addMapping4withAC0E0VAA6ResultOyAA8ResponseVGSg10Foundation10URLRequestV_ACtc_tF"></a>
                     <a name="//apple_ref/swift/Method/addMapping(with:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14Cauliframework10MockFloretC10addMapping4withAC0E0VAA6ResultOyAA8ResponseVGSg10Foundation10URLRequestV_ACtc_tF">addMapping(with:)</a>
+                    <a class="token" href="#/s:14Cauliframework10MockFloretC10addMapping4withAC0E0VAA6ResultOyAA8ResponseVGSg10Foundation10URLRequestV_ACtc_tF">addMapping(with:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -476,7 +503,7 @@ bundle) to decode a Result by a given path.</p>
                     <code>
                     <a name="/s:14Cauliframework10MockFloretC10addMapping10forUrlPath4withAC0E0VSS_AA6ResultOyAA8ResponseVGSg10Foundation10URLRequestV_ACtctF"></a>
                     <a name="//apple_ref/swift/Method/addMapping(forUrlPath:with:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14Cauliframework10MockFloretC10addMapping10forUrlPath4withAC0E0VSS_AA6ResultOyAA8ResponseVGSg10Foundation10URLRequestV_ACtctF">addMapping(forUrlPath:with:)</a>
+                    <a class="token" href="#/s:14Cauliframework10MockFloretC10addMapping10forUrlPath4withAC0E0VSS_AA6ResultOyAA8ResponseVGSg10Foundation10URLRequestV_ACtctF">addMapping(forUrlPath:<wbr>with:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -541,7 +568,7 @@ the given path.</p>
                     <code>
                     <a name="/s:14Cauliframework10MockFloretC10addMapping6forUrl4withAC0E0V10Foundation3URLV_AA6ResultOyAA8ResponseVGSgAI10URLRequestV_ACtctF"></a>
                     <a name="//apple_ref/swift/Method/addMapping(forUrl:with:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14Cauliframework10MockFloretC10addMapping6forUrl4withAC0E0V10Foundation3URLV_AA6ResultOyAA8ResponseVGSgAI10URLRequestV_ACtctF">addMapping(forUrl:with:)</a>
+                    <a class="token" href="#/s:14Cauliframework10MockFloretC10addMapping6forUrl4withAC0E0V10Foundation3URLV_AA6ResultOyAA8ResponseVGSgAI10URLRequestV_ACtctF">addMapping(forUrl:<wbr>with:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -606,7 +633,7 @@ the given url.</p>
                     <code>
                     <a name="/s:14Cauliframework10MockFloretC13removeMappingyyAC0E0VF"></a>
                     <a name="//apple_ref/swift/Method/removeMapping(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14Cauliframework10MockFloretC13removeMappingyyAC0E0VF">removeMapping(_:)</a>
+                    <a class="token" href="#/s:14Cauliframework10MockFloretC13removeMappingyyAC0E0VF">removeMapping(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -648,10 +675,6 @@ it does nothing.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -680,10 +703,6 @@ it does nothing.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -722,8 +741,8 @@ used to remove a Mapping via <code>removeMapping</code>.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="https://cauli.works" target="_blank" rel="external">Cornelius Horstmann and Pascal Stüdlein</a>. All rights reserved. (Last updated: 2019-03-03)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2021 <a class="link" href="https://cauli.works" target="_blank" rel="external">Cornelius Horstmann and Pascal Stüdlein</a>. All rights reserved. (Last updated: 2021-03-13)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
