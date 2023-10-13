@@ -18,7 +18,7 @@ title:            Cauli
 tagline:          'Debug Networking – cauli.works'
 description:      'Debug Networking – cauli.works'
 url:              https://cauli.works
-baseurl:          ""
+baseurl:          "/"
 twitter_username: cauliframework
 github_username:  jekyll
 
