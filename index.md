@@ -16,27 +16,20 @@ Cauli is a network debugging framework featuring a plugin infrastructure to hook
 ## Getting Started
 
 ### Installation
-#### [CocoaPods](https://cocoapods.org)
 
-Use the following in your Podfile.
+#### [Swift Package Manager](https://swift.org/package-manager/)
 
-```ruby
-pod 'Cauliframework'
-```
-
-Then run `pod install`.
-
-#### Carthage
-
-[Carthage](https://github.com/Carthage/Carthage) is a non intrusive way to install Cauli to your project. It makes no changes to your Xcode project and workspace. Add the following to your Cartfile:
+The Swift Package Manager is a tool for automating the distribution of Swift code and is integrated into the swift compiler. Once you have your Swift package set up, add the following to your `Package.swift` file.
 
 ```swift
-github "cauliframework/cauli"
+dependencies: [
+    .package(url: "https://github.com/cauliframework/cauli.git", from: "1.1")
+]
 ```
 
 ### Setup
 
-Add an `import Cauliframework` to your `AppDelegate` and call the `run` function on the shared instace in the `application(:, didFinishLaunchingWithOptions:)`.
+Add an `import Cauliframework` to your `AppDelegate` and call the `run` function on the shared instace in the `application(:, didFinishLaunchingWithOptions:)`. Make sure to call `run` before instantiating any `URLSession`. Otherwise Cauli can't intercept network requests and create any records.
 
 ```swift
 import Cauliframework

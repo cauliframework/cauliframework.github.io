@@ -1,0 +1,47 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Florets/Inspector/Formatter/InspectorFloretFormatter.swift",
+      "line": 25,
+      "symbol": "InspectorFloretFormatter",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Florets/Inspector/Formatter/InspectorFloretFormatter.swift",
+      "line": 26,
+      "symbol": "InspectorFloretFormatter.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Florets/MapRemote/MapRemoteFloret.swift",
+      "line": 97,
+      "symbol": "MapRemoteFloret.viewController(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Florets/MapRemote/Mapping.swift",
+      "line": 125,
+      "symbol": "MappingLocation.Protocol",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Florets/MapRemote/Mapping.swift",
+      "line": 126,
+      "symbol": "MappingLocation.Protocol.http",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/corneliushorstmann/Development/cauli/Cauli/Florets/MapRemote/Mapping.swift",
+      "line": 127,
+      "symbol": "MappingLocation.Protocol.https",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/corneliushorstmann/Development/cauli"
+}
