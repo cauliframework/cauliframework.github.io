@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mock Network Requests
+cauli_version: "1.0"
 ---
 
 The Cauli Framework brings along a very mighty [Floret](https://cauli.works/docs/Protocols/Floret.html) that helps you to get up and running mocking all your network requests in no time. The [MockFloret](https://cauli.works/docs/Classes/MockFloret.html) helps recording all network requests which then can be included for your Unit Tests and specifically selected.
