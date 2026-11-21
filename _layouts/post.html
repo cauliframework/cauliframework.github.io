@@ -5,6 +5,11 @@ layout: default
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
+  {% if page.cauli_version and page.cauli_version != site.version %}
+  <p class="message">
+    This post is based on Cauli {{ page.cauli_version }}. The current version is {{ site.version }}, so some details may have changed. The <a href="{{ site.url }}/docs/">documentation</a> always describes the current version.
+  </p>
+  {% endif %}
   {{ content }}
 </div>
 
