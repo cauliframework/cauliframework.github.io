@@ -20,9 +20,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          Cauliframework 1.1 Docs
+          Cauliframework 1.2 Docs
         </a>
-         (95% documented)
+         (96% documented)
       </p>
     
       <div class="header-col--secondary">
@@ -41,7 +41,9 @@
     </header>
 
     <p class="breadcrumbs">
-      <a class="breadcrumb" href="index.html">Cauliframework Reference</a>
+      <a class="breadcrumb" href="index.html">Cauliframework</a>
+      <img class="carat" src="img/carat.png" alt=""/>
+      <a class="breadcrumb" href="Guides.html">Guides</a>
       <img class="carat" src="img/carat.png" alt=""/>
       Frequently Asked Questions  Reference
     </p>
@@ -65,6 +67,9 @@
                 <a class="nav-group-task-link" href="frequently-asked-questions.html">Frequently Asked Questions</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="mockfloret.html">MockFloret</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="writing-your-own-plugin.html">Writing Your Own Plugin</a>
               </li>
             </ul>
@@ -77,6 +82,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/FindReplaceFloret.html">FindReplaceFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/FindReplaceFloret/ReplaceDefinition.html">– ReplaceDefinition</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HTTPBodyStreamFloret.html">HTTPBodyStreamFloret</a>
@@ -200,6 +208,26 @@ Currently only the <code>URLSession.default</code> and <code>URLSessions</code> 
 
 <p>WKWebView runs out of process, meaning it is not using the URL loading system of your application and thus are not passing through the <code>URLProtocol</code>. In iOS 11 Apple added the <a href="https://developer.apple.com/documentation/webkit/wkwebviewconfiguration/2875766-seturlschemehandler?language=objc"><code>setURLSchemeHandler:forURLScheme:</code></a> on the <a href="https://developer.apple.com/documentation/webkit/wkwebviewconfiguration?language=objc">WKWebViewConfiguration</a> which can be used to intercept requests, but it is not possible to register a custom <code>WKURLSchemeHandler</code> for http or https schemes. There are <a href="https://github.com/wilddylan/WKWebViewWithURLProtocol/blob/master/WKWebViewWithURLProtocol/NSURLProtocol%2BWKWebViewSupport.m">alternative solutions</a> which leverage private API, but Cauli should stay private API free.
 <code>SFSafariViewController</code> runs out of process as well and is sandboxed. There are no APIs to intercept requests.</p>
+<h2 id='why-is-the-upload-progress-not-reported-for-intercepted-uploads' class='heading'>Why is the upload progress not reported for intercepted uploads?</h2>
+
+<p>Cauli intercepts requests with a <code>URLProtocol</code>, which performs the request on its own <code>URLSession</code> and reports the response back to yours. A <code>URLProtocol</code> can report responses, data, redirects and errors, but there is no API to report how many bytes of a request body were sent. Because of that, <code>urlSession(_:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:)</code> of your <code>URLSessionTaskDelegate</code> isn&rsquo;t called for requests Cauli intercepts. All other delegate methods are called as usual. This is a limitation of the URL Loading System, which affects all <code>URLProtocol</code> based tools.</p>
+
+<p>If you rely on the upload progress, you can exclude those requests from Cauli with a <code><a href="Structs/RecordSelector.html">RecordSelector</a></code>. Requests that aren&rsquo;t selected aren&rsquo;t intercepted at all, so their progress is reported as usual, but they aren&rsquo;t recorded or modified by any floret either.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">recordSelector</span> <span class="o">=</span> <span class="kt">RecordSelector</span> <span class="p">{</span> <span class="n">record</span> <span class="k">in</span>
+    <span class="c1">// Don't intercept uploads, so their progress is reported.</span>
+    <span class="n">record</span><span class="o">.</span><span class="n">designatedRequest</span><span class="o">.</span><span class="n">url</span><span class="p">?</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="nf">hasPrefix</span><span class="p">(</span><span class="s">"/upload"</span><span class="p">)</span> <span class="o">!=</span> <span class="kc">true</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">Configuration</span><span class="p">(</span>
+    <span class="nv">recordSelector</span><span class="p">:</span> <span class="n">recordSelector</span><span class="p">,</span>
+    <span class="nv">enableShakeGesture</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nv">storageCapacity</span><span class="p">:</span> <span class="o">.</span><span class="nf">records</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">cauli</span> <span class="o">=</span> <span class="kt">Cauli</span><span class="p">([</span> <span class="kt">InspectorFloret</span><span class="p">()</span> <span class="p">],</span> <span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
+</code></pre>
+
+<p>This replaces the default <code><a href="Structs/RecordSelector.html#/s:14Cauliframework14RecordSelectorV3max8bytesizeACSi_tFZ">RecordSelector.max(bytesize:)</a></code>, so responses of any size are recorded for all other requests.</p>
 <h2 id='how-can-i-modify-records-before-they-are-displayed-in-displaying-florets-like-the-inspectorfloret' class='heading'>How can I modify Records before they are displayed in displaying florets, like the InspectorFloret?</h2>
 
 <p>You may want to modify certain aspects of recorded requests or responses before they are displayed in the <code><a href="Classes/Cauli.html">Cauli</a></code> view controller. For example you have some confidential information in the request headers, like an API key or auth token that you don&rsquo;t want to expose.</p>
@@ -231,8 +259,8 @@ Currently only the <code>URLSession.default</code> and <code>URLSessions</code> 
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2023 <a class="link" href="https://cauli.works" target="_blank" rel="external noopener">Cornelius Horstmann and Pascal Stüdlein</a>. All rights reserved. (Last updated: 2023-10-13)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+      <p>&copy; 2026 <a class="link" href="https://cauli.works" target="_blank" rel="external noopener">Cornelius Horstmann and Pascal Stüdlein</a>. All rights reserved. (Last updated: 2026-11-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
 </html>

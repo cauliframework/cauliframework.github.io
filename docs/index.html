@@ -20,9 +20,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          Cauliframework 1.1 Docs
+          Cauliframework 1.2 Docs
         </a>
-         (95% documented)
+         (96% documented)
       </p>
     
       <div class="header-col--secondary">
@@ -41,9 +41,7 @@
     </header>
 
     <p class="breadcrumbs">
-      <a class="breadcrumb" href="index.html">Cauliframework Reference</a>
-      <img class="carat" src="img/carat.png" alt=""/>
-      Cauliframework  Reference
+      <a class="breadcrumb" href="index.html">Cauliframework</a>
     </p>
 
     <div class="content-wrapper">
@@ -65,6 +63,9 @@
                 <a class="nav-group-task-link" href="frequently-asked-questions.html">Frequently Asked Questions</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="mockfloret.html">MockFloret</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="writing-your-own-plugin.html">Writing Your Own Plugin</a>
               </li>
             </ul>
@@ -77,6 +78,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/FindReplaceFloret.html">FindReplaceFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/FindReplaceFloret/ReplaceDefinition.html">– ReplaceDefinition</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HTTPBodyStreamFloret.html">HTTPBodyStreamFloret</a>
@@ -208,6 +212,7 @@
 <li><a href="https://cauli.works/docs/configuring-cauli.html">Configuring Cauli</a></li>
 <li><a href="https://cauli.works/docs/florets.html">Plugins / Florets</a></li>
 <li><a href="https://cauli.works/docs/writing-your-own-plugin.html">Writing Your Own Plugin / Floret</a></li>
+<li><a href="https://cauli.works/docs/mockfloret.html">MockFloret</a></li>
 <li><a href="https://cauli.works/docs/frequently-asked-questions.html">Frequently Asked Questions</a></li>
 </ul>
 <h2 id='getting-started' class='heading'>Getting Started</h2>
@@ -216,16 +221,18 @@
 
 <p>The Swift Package Manager is a tool for automating the distribution of Swift code and is integrated into the swift compiler. Once you have your Swift package set up, add the following to your <code>Package.swift</code> file.</p>
 <pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/cauliframework/cauli.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"1.1"</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/cauliframework/cauli.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"1.2"</span><span class="p">)</span>
 <span class="p">]</span>
 </code></pre>
 <h3 id='setup' class='heading'>Setup</h3>
 
-<p>Add an <code>import Cauliframework</code> to your <code>AppDelegate</code> and call the <code>run</code> function on the shared instace in the <code>application(:, didFinishLaunchingWithOptions:)</code>. Make sure to call <code>run</code> before instantiating any <code>URLSession</code>. Otherwise Cauli can&rsquo;t intercept network requests and create any records.</p>
+<p>Add an <code>import Cauliframework</code> to your <code>AppDelegate</code> and call the <code>run</code> function on the shared instance in <code>application(_:didFinishLaunchingWithOptions:)</code>. Make sure to call <code>run</code> before instantiating any <code>URLSession</code>. Otherwise Cauli can&rsquo;t intercept network requests and create any records.</p>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Cauliframework</span>
+<span class="kd">import</span> <span class="kt">UIKit</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">AppDelegate</span><span class="p">:</span> <span class="kt">UIApplicationDelegate</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplicationLaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+<span class="kd">@main</span>
+<span class="kd">class</span> <span class="kt">AppDelegate</span><span class="p">:</span> <span class="kt">UIResponder</span><span class="p">,</span> <span class="kt">UIApplicationDelegate</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplication</span><span class="o">.</span><span class="kt">LaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
         <span class="kt">Cauli</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">run</span><span class="p">()</span>
         <span class="c1">// perform your usual application setup</span>
         <span class="k">return</span> <span class="kc">true</span>
@@ -234,6 +241,64 @@
 </code></pre>
 
 <p>This will configure Cauli to hook into every request, setup the core florets (plugins) (<a href="https://cauli.works/docs/Classes/InspectorFloret.html">InspectorFloret</a>) and configures a shake gesture for the Cauli UI.</p>
+<h2 id='built-in-florets' class='heading'>Built-in Florets</h2>
+
+<ul>
+<li><a href="https://cauli.works/docs/Classes/InspectorFloret.html">InspectorFloret</a> lets you browse through and share your requests and responses from within the application. Just shake your device (if you are using the default configuration).</li>
+<li><a href="https://cauli.works/docs/Classes/MockFloret.html">MockFloret</a> mocks your network requests, e.g. for tests or to reproduce a bug. It can also record responses for later mocking.</li>
+<li><a href="https://cauli.works/docs/Classes/NoCacheFloret.html">NoCacheFloret</a> modifies requests and responses so that no cached data is returned or written to the cache.</li>
+<li><a href="https://cauli.works/docs/Classes/FindReplaceFloret.html">FindReplaceFloret</a> replaces any part of a request or response, using a <a href="https://cauli.works/docs/Structs/RecordModifier.html">RecordModifier</a>.</li>
+<li><a href="https://cauli.works/docs/Classes/MapRemoteFloret.html">MapRemoteFloret</a> changes the url of a request before it is performed, e.g. to use a staging or testing server.</li>
+<li><a href="https://cauli.works/docs/Classes/HTTPBodyStreamFloret.html">HTTPBodyStreamFloret</a> turns a request&rsquo;s <code>httpBodyStream</code> into <code>httpBody</code> data, so the body can be inspected and modified.</li>
+</ul>
+
+<p>Pass the florets you want to use when creating your own <code><a href="Classes/Cauli.html">Cauli</a></code> instance:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">cauli</span> <span class="o">=</span> <span class="kt">Cauli</span><span class="p">([</span><span class="kt">InspectorFloret</span><span class="p">(),</span> <span class="kt">NoCacheFloret</span><span class="p">()])</span>
+<span class="n">cauli</span><span class="o">.</span><span class="nf">run</span><span class="p">()</span>
+</code></pre>
+
+<p>For more information read <a href="https://cauli.works/docs/florets.html">Plugins / Florets</a>.</p>
+<h2 id='writing-your-own-floret' class='heading'>Writing your own Floret</h2>
+
+<p>A floret can process requests and responses, provide its own UI, or both:</p>
+
+<ul>
+<li><strong><a href="https://cauli.works/docs/Protocols/InterceptingFloret.html">InterceptingFloret</a></strong> is called before a request is sent (<code>willRequest</code>) and after its response arrived (<code>didRespond</code>). It can modify the <code><a href="Structs/Record.html">Record</a></code> before passing it on.</li>
+<li><strong><a href="https://cauli.works/docs/Protocols/DisplayingFloret.html">DisplayingFloret</a></strong> provides a view controller, which is shown in the Cauli UI. It has access to the <code><a href="Classes/Cauli.html">Cauli</a></code> instance and thus to its <a href="https://cauli.works/docs/Protocols/Storage.html">Storage</a> of recorded requests.</li>
+</ul>
+
+<p>This example prints every request and response to the console:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Cauliframework</span>
+
+<span class="kd">final</span> <span class="kd">class</span> <span class="kt">LoggingFloret</span><span class="p">:</span> <span class="kt">InterceptingFloret</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="s">"Prints every request and response to the console."</span> <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">willRequest</span><span class="p">(</span><span class="n">_</span> <span class="nv">record</span><span class="p">:</span> <span class="kt">Record</span><span class="p">,</span> <span class="n">modificationCompletionHandler</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Record</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">request</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">designatedRequest</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"→ </span><span class="se">\(</span><span class="n">request</span><span class="o">.</span><span class="n">httpMethod</span> <span class="p">??</span> <span class="s">"GET"</span><span class="se">)</span><span class="s"> </span><span class="se">\(</span><span class="n">request</span><span class="o">.</span><span class="n">url</span><span class="p">?</span><span class="o">.</span><span class="n">absoluteString</span> <span class="p">??</span> <span class="s">"-"</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+        <span class="nf">completionHandler</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">didRespond</span><span class="p">(</span><span class="n">_</span> <span class="nv">record</span><span class="p">:</span> <span class="kt">Record</span><span class="p">,</span> <span class="n">modificationCompletionHandler</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Record</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">designatedRequest</span><span class="o">.</span><span class="n">url</span><span class="p">?</span><span class="o">.</span><span class="n">absoluteString</span> <span class="p">??</span> <span class="s">"-"</span>
+        <span class="k">switch</span> <span class="n">record</span><span class="o">.</span><span class="n">result</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="o">.</span><span class="nf">result</span><span class="p">(</span><span class="k">let</span> <span class="nv">response</span><span class="p">)?:</span>
+            <span class="k">let</span> <span class="nv">statusCode</span> <span class="o">=</span> <span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">urlResponse</span> <span class="k">as?</span> <span class="kt">HTTPURLResponse</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="kt">String</span><span class="p">(</span><span class="nv">$0</span><span class="o">.</span><span class="n">statusCode</span><span class="p">)</span> <span class="p">}</span> <span class="p">??</span> <span class="s">"-"</span>
+            <span class="nf">print</span><span class="p">(</span><span class="s">"← </span><span class="se">\(</span><span class="n">statusCode</span><span class="se">)</span><span class="s"> </span><span class="se">\(</span><span class="n">url</span><span class="se">)</span><span class="s"> (</span><span class="se">\(</span><span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">?</span><span class="o">.</span><span class="n">count</span> <span class="p">??</span> <span class="mi">0</span><span class="se">)</span><span class="s"> bytes)"</span><span class="p">)</span>
+        <span class="k">case</span> <span class="o">.</span><span class="nf">error</span><span class="p">(</span><span class="k">let</span> <span class="nv">error</span><span class="p">)?:</span>
+            <span class="nf">print</span><span class="p">(</span><span class="s">"← failed </span><span class="se">\(</span><span class="n">url</span><span class="se">)</span><span class="s">: </span><span class="se">\(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+        <span class="k">case</span> <span class="nv">nil</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="p">}</span>
+        <span class="nf">completionHandler</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p><code>willRequest</code> and <code>didRespond</code> are called on a background thread. Always call the completion handler exactly once, with the original or a modified record, otherwise the request won&rsquo;t continue.</p>
+
+<p>Add it like any other floret, e.g. <code>Cauli([InspectorFloret(), LoggingFloret()])</code>. For more details read <a href="https://cauli.works/docs/writing-your-own-plugin.html">Writing Your Own Plugin / Floret</a>.</p>
 <h2 id='contributing' class='heading'>Contributing</h2>
 
 <p>Please read <a href="CONTRIBUTING.md">CONTRIBUTING</a> for details.</p>
@@ -248,8 +313,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2023 <a class="link" href="https://cauli.works" target="_blank" rel="external noopener">Cornelius Horstmann and Pascal Stüdlein</a>. All rights reserved. (Last updated: 2023-10-13)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+      <p>&copy; 2026 <a class="link" href="https://cauli.works" target="_blank" rel="external noopener">Cornelius Horstmann and Pascal Stüdlein</a>. All rights reserved. (Last updated: 2026-11-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
 </html>
