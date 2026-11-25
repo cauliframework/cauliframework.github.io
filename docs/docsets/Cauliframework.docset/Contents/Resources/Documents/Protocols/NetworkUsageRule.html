@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NetworkUsageRule Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/NetworkUsageRule" class="dashAnchor"></a>
+
+    <a title="NetworkUsageRule Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Cauliframework 1.4 Docs
+        </a>
+         (98% documented)
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/cauliframework/cauli">
+            <img class="header-icon" src="../img/gh.png" alt="GitHub"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Cauliframework</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      <a class="breadcrumb" href="../Protocols.html">Protocols</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      NetworkUsageRule Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../architecture.html">Architecture</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../configuring-cauli.html">Configuring Cauli</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../florets.html">Florets</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../frequently-asked-questions.html">Frequently Asked Questions</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../mockfloret.html">MockFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../writing-your-own-plugin.html">Writing Your Own Plugin</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Cauli.html">Cauli</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FindReplaceFloret.html">FindReplaceFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FindReplaceFloret/ReplaceDefinition.html">– ReplaceDefinition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HTTPBodyStreamFloret.html">HTTPBodyStreamFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/InspectorFloret.html">InspectorFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/InspectorFloret/RecordListFormattedData.html">– RecordListFormattedData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/InspectorFloretFormatter.html">InspectorFloretFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MapRemoteFloret.html">MapRemoteFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MockFloret.html">MockFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MockFloret/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MockFloret.html#/s:14Cauliframework10MockFloretC7MappingV">– Mapping</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetworkConditionsFloret.html">NetworkConditionsFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetworkUsageFloret.html">NetworkUsageFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NoCacheFloret.html">NoCacheFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SecurityAuditFloret.html">SecurityAuditFloret</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HTTPArchive.html">HTTPArchive</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/Result.html">Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SecurityAuditSeverity.html">SecurityAuditSeverity</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/StorageCapacity.html">StorageCapacity</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NSError.html">NSError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NSError/Cauli.html">– Cauli</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIWindow.html">UIWindow</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DisplayingFloret.html">DisplayingFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Floret.html">Floret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/InspectorFloretFormatterType.html">InspectorFloretFormatterType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/InterceptingFloret.html">InterceptingFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/NetworkUsageRule.html">NetworkUsageRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SecurityAuditRule.html">SecurityAuditRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Storage.html">Storage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CleartextHTTPRule.html">CleartextHTTPRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Configuration.html">Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ConnectionReuseRule.html">ConnectionReuseRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CredentialsOverHTTPRule.html">CredentialsOverHTTPRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DuplicateRequestRule.html">DuplicateRequestRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/EndpointUsage.html">EndpointUsage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HostUsage.html">HostUsage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/InsecureCookieRule.html">InsecureCookieRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/LargePayloadRule.html">LargePayloadRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/LegacyProtocolRule.html">LegacyProtocolRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Mapping.html">Mapping</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MappingLocation.html">MappingLocation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MappingLocation/Protocol.html">– Protocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MissingHSTSRule.html">MissingHSTSRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkCondition.html">NetworkCondition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkCondition/Failure.html">– Failure</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageHint.html">NetworkUsageHint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageHint/Severity.html">– Severity</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageSnapshot.html">NetworkUsageSnapshot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageTotals.html">NetworkUsageTotals</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageTransfer.html">NetworkUsageTransfer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NotCacheableRule.html">NotCacheableRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/OutdatedTLSRule.html">OutdatedTLSRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PersonalDataInURLRule.html">PersonalDataInURLRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Record.html">Record</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RecordModifier.html">RecordModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RecordSelector.html">RecordSelector</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Response.html">Response</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecretsInURLRule.html">SecretsInURLRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditExchange.html">SecurityAuditExchange</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditFinding.html">SecurityAuditFinding</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditFinding/Scope.html">– Scope</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditIgnoredFinding.html">SecurityAuditIgnoredFinding</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditIssue.html">SecurityAuditIssue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditIssue/Endpoint.html">– Endpoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ThirdPartyPersonalDataRule.html">ThirdPartyPersonalDataRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/TransferMetrics.html">TransferMetrics</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/UncompressedResponseRule.html">UncompressedResponseRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/UncompressedUploadRule.html">UncompressedUploadRule</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>NetworkUsageRule</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">NetworkUsageRule</span></code></pre>
+
+                </div>
+              </div>
+            <p>A rule finds one kind of avoidable network usage in a <code><a href="../Structs/NetworkUsageSnapshot.html">NetworkUsageSnapshot</a></code>,
+e.g. uncompressed responses. Every hint it returns is shown by the <code><a href="../Classes/NetworkUsageFloret.html">NetworkUsageFloret</a></code>.</p>
+
+<p>Rules are pure functions of the snapshot, so they are easy to test:</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">ImageFormatRule</span><span class="p">:</span> <span class="kt">NetworkUsageRule</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">identifier</span> <span class="o">=</span> <span class="s">"legacy-image-format"</span>
+    <span class="kd">func</span> <span class="nf">evaluate</span><span class="p">(</span><span class="n">_</span> <span class="nv">usage</span><span class="p">:</span> <span class="kt">NetworkUsageSnapshot</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NetworkUsageHint</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">keys</span> <span class="o">=</span> <span class="kt">Set</span><span class="p">(</span><span class="n">usage</span><span class="o">.</span><span class="n">transfers</span><span class="o">.</span><span class="n">filter</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="n">responseContentType</span> <span class="o">==</span> <span class="s">"image/png"</span> <span class="p">}</span><span class="o">.</span><span class="nf">map</span><span class="p">(\</span><span class="o">.</span><span class="n">endpointKey</span><span class="p">))</span>
+        <span class="k">guard</span> <span class="o">!</span><span class="n">keys</span><span class="o">.</span><span class="n">isEmpty</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">nil</span> <span class="p">}</span>
+        <span class="k">return</span> <span class="kt">NetworkUsageHint</span><span class="p">(</span><span class="nv">ruleIdentifier</span><span class="p">:</span> <span class="n">identifier</span><span class="p">,</span> <span class="nv">severity</span><span class="p">:</span> <span class="o">.</span><span class="n">info</span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="s">"PNG images"</span><span class="p">,</span>
+                                <span class="nv">summary</span><span class="p">:</span> <span class="s">"</span><span class="se">\(</span><span class="n">keys</span><span class="o">.</span><span class="n">count</span><span class="se">)</span><span class="s"> endpoints serve PNG images"</span><span class="p">,</span>
+                                <span class="nv">affectedEndpoints</span><span class="p">:</span> <span class="n">usage</span><span class="o">.</span><span class="nf">endpoints</span><span class="p">(</span><span class="nv">withKeys</span><span class="p">:</span> <span class="n">keys</span><span class="p">),</span>
+                                <span class="nv">estimatedSavingBytes</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">howToFix</span><span class="p">:</span> <span class="s">"Serve WebP or AVIF instead."</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">floret</span> <span class="o">=</span> <span class="kt">NetworkUsageFloret</span><span class="p">(</span><span class="nv">rules</span><span class="p">:</span> <span class="kt">NetworkUsageFloret</span><span class="o">.</span><span class="n">defaultRules</span> <span class="o">+</span> <span class="p">[</span><span class="kt">ImageFormatRule</span><span class="p">()])</span>
+</code></pre>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework16NetworkUsageRuleP10identifierSSvp"></a>
+                    <a name="//apple_ref/swift/Property/identifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework16NetworkUsageRuleP10identifierSSvp">identifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Identifies the rule and its hints, e.g. &ldquo;uncompressed-response&rdquo;.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework16NetworkUsageRuleP8evaluateyAA0bC4HintVSgAA0bC8SnapshotVF"></a>
+                    <a name="//apple_ref/swift/Method/evaluate(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework16NetworkUsageRuleP8evaluateyAA0bC4HintVSgAA0bC8SnapshotVF">evaluate(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a hint if the usage shows what the rule looks for, else <code>nil</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">evaluate</span><span class="p">(</span><span class="n">_</span> <span class="nv">usage</span><span class="p">:</span> <span class="kt"><a href="../Structs/NetworkUsageSnapshot.html">NetworkUsageSnapshot</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/NetworkUsageHint.html">NetworkUsageHint</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2026 <a class="link" href="https://cauli.works" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2026-11-25)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>

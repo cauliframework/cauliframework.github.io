@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NetworkConditionsFloret Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/NetworkConditionsFloret" class="dashAnchor"></a>
+
+    <a title="NetworkConditionsFloret Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Cauliframework 1.4 Docs
+        </a>
+         (98% documented)
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/cauliframework/cauli">
+            <img class="header-icon" src="../img/gh.png" alt="GitHub"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Cauliframework</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      <a class="breadcrumb" href="../Classes.html">Classes</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      NetworkConditionsFloret Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../architecture.html">Architecture</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../configuring-cauli.html">Configuring Cauli</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../florets.html">Florets</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../frequently-asked-questions.html">Frequently Asked Questions</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../mockfloret.html">MockFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../writing-your-own-plugin.html">Writing Your Own Plugin</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Cauli.html">Cauli</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FindReplaceFloret.html">FindReplaceFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FindReplaceFloret/ReplaceDefinition.html">– ReplaceDefinition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HTTPBodyStreamFloret.html">HTTPBodyStreamFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/InspectorFloret.html">InspectorFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/InspectorFloret/RecordListFormattedData.html">– RecordListFormattedData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/InspectorFloretFormatter.html">InspectorFloretFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MapRemoteFloret.html">MapRemoteFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MockFloret.html">MockFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MockFloret/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MockFloret.html#/s:14Cauliframework10MockFloretC7MappingV">– Mapping</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetworkConditionsFloret.html">NetworkConditionsFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetworkUsageFloret.html">NetworkUsageFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NoCacheFloret.html">NoCacheFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SecurityAuditFloret.html">SecurityAuditFloret</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HTTPArchive.html">HTTPArchive</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/Result.html">Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SecurityAuditSeverity.html">SecurityAuditSeverity</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/StorageCapacity.html">StorageCapacity</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NSError.html">NSError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NSError/Cauli.html">– Cauli</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIWindow.html">UIWindow</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DisplayingFloret.html">DisplayingFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Floret.html">Floret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/InspectorFloretFormatterType.html">InspectorFloretFormatterType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/InterceptingFloret.html">InterceptingFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/NetworkUsageRule.html">NetworkUsageRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SecurityAuditRule.html">SecurityAuditRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Storage.html">Storage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CleartextHTTPRule.html">CleartextHTTPRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Configuration.html">Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ConnectionReuseRule.html">ConnectionReuseRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CredentialsOverHTTPRule.html">CredentialsOverHTTPRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DuplicateRequestRule.html">DuplicateRequestRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/EndpointUsage.html">EndpointUsage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HostUsage.html">HostUsage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/InsecureCookieRule.html">InsecureCookieRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/LargePayloadRule.html">LargePayloadRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/LegacyProtocolRule.html">LegacyProtocolRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Mapping.html">Mapping</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MappingLocation.html">MappingLocation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MappingLocation/Protocol.html">– Protocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MissingHSTSRule.html">MissingHSTSRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkCondition.html">NetworkCondition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkCondition/Failure.html">– Failure</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageHint.html">NetworkUsageHint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageHint/Severity.html">– Severity</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageSnapshot.html">NetworkUsageSnapshot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageTotals.html">NetworkUsageTotals</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageTransfer.html">NetworkUsageTransfer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NotCacheableRule.html">NotCacheableRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/OutdatedTLSRule.html">OutdatedTLSRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PersonalDataInURLRule.html">PersonalDataInURLRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Record.html">Record</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RecordModifier.html">RecordModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RecordSelector.html">RecordSelector</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Response.html">Response</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecretsInURLRule.html">SecretsInURLRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditExchange.html">SecurityAuditExchange</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditFinding.html">SecurityAuditFinding</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditFinding/Scope.html">– Scope</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditIgnoredFinding.html">SecurityAuditIgnoredFinding</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditIssue.html">SecurityAuditIssue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditIssue/Endpoint.html">– Endpoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ThirdPartyPersonalDataRule.html">ThirdPartyPersonalDataRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/TransferMetrics.html">TransferMetrics</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/UncompressedResponseRule.html">UncompressedResponseRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/UncompressedUploadRule.html">UncompressedUploadRule</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>NetworkConditionsFloret</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NetworkConditionsFloret</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/InterceptingFloret.html">InterceptingFloret</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">NetworkConditionsFloret</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DisplayingFloret.html">DisplayingFloret</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>The NetworkConditionsFloret simulates slow and unreliable networks: it delays requests and
+responses and lets a share of them fail, with a <code><a href="../Structs/NetworkCondition.html">NetworkCondition</a></code> per host.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">conditions</span> <span class="o">=</span> <span class="kt">NetworkConditionsFloret</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">cauli</span> <span class="o">=</span> <span class="kt">Cauli</span><span class="p">([</span><span class="kt">InspectorFloret</span><span class="p">(),</span> <span class="n">conditions</span><span class="p">])</span>
+<span class="n">conditions</span><span class="o">.</span><span class="n">defaultCondition</span> <span class="o">=</span> <span class="o">.</span><span class="n">threeG</span>
+<span class="n">conditions</span><span class="o">.</span><span class="nf">setCondition</span><span class="p">(</span><span class="o">.</span><span class="n">offline</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="s">"api.example.com"</span><span class="p">)</span>
+</code></pre>
+
+<p>The conditions and every host the app connected to are kept across app starts.
+Responses reach the app at once, so bandwidth limits are simulated as a delay.
+Only requests Cauli intercepts are affected.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework23NetworkConditionsFloretC12maximumHostsSivpZ"></a>
+                    <a name="//apple_ref/swift/Variable/maximumHosts" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework23NetworkConditionsFloretC12maximumHostsSivpZ">maximumHosts</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum number of hosts remembered. The least recently used ones are forgotten first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">maximumHosts</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework23NetworkConditionsFloretC7enabledSbvp"></a>
+                    <a name="//apple_ref/swift/Property/enabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework23NetworkConditionsFloretC7enabledSbvp">enabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If the floret is disabled, requests are passed on unchanged.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework23NetworkConditionsFloretC10conditionsSayAA0B9ConditionVGvp"></a>
+                    <a name="//apple_ref/swift/Property/conditions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework23NetworkConditionsFloretC10conditionsSayAA0B9ConditionVGvp">conditions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The conditions that can be selected: the presets and your own.
+A condition set in code that is not in the list is added to it.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">conditions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/NetworkCondition.html">NetworkCondition</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework23NetworkConditionsFloretC10conditions12userDefaultsACSayAA0B9ConditionVG_So06NSUserG0Ctcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(conditions:userDefaults:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework23NetworkConditionsFloretC10conditions12userDefaultsACSayAA0B9ConditionVG_So06NSUserG0Ctcfc">init(conditions:<wbr>userDefaults:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates the floret.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">conditions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/NetworkCondition.html">NetworkCondition</a></span><span class="p">]</span> <span class="o">=</span> <span class="kt"><a href="../Structs/NetworkCondition.html">NetworkCondition</a></span><span class="o">.</span><span class="n">presets</span><span class="p">,</span> <span class="nv">userDefaults</span><span class="p">:</span> <span class="kt">UserDefaults</span> <span class="o">=</span> <span class="o">.</span><span class="n">standard</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conditions</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The conditions that can be selected in the Cauli menu. Add your own to the presets.
+Pass them on every app start, so their hosts keep them.
+&ldquo;No throttling&rdquo; is always included.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userDefaults</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Where the conditions and hosts are kept across app starts.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Conditions"></a>
+                <a name="//apple_ref/swift/Section/Conditions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Conditions"></a>
+                  <h3 class="section-name"><span>Conditions</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework23NetworkConditionsFloretC16defaultConditionAA0bF0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/defaultCondition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework23NetworkConditionsFloretC16defaultConditionAA0bF0Vvp">defaultCondition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The condition of every host without its own condition.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">defaultCondition</span><span class="p">:</span> <span class="kt"><a href="../Structs/NetworkCondition.html">NetworkCondition</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework23NetworkConditionsFloretC9condition3forAA0B9ConditionVSgSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/condition(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework23NetworkConditionsFloretC9condition3forAA0B9ConditionVSgSS_tF">condition(for:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The host&rsquo;s own condition, <code>nil</code> if it uses the default.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">condition</span><span class="p">(</span><span class="k">for</span> <span class="nv">host</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/NetworkCondition.html">NetworkCondition</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework23NetworkConditionsFloretC18effectiveCondition3forAA0bF0VSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/effectiveCondition(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework23NetworkConditionsFloretC18effectiveCondition3forAA0bF0VSS_tF">effectiveCondition(for:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The condition requests to the host get: its own, else the default.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">effectiveCondition</span><span class="p">(</span><span class="k">for</span> <span class="nv">host</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/NetworkCondition.html">NetworkCondition</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework23NetworkConditionsFloretC12setCondition_3foryAA0bF0VSg_SStF"></a>
+                    <a name="//apple_ref/swift/Method/setCondition(_:for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework23NetworkConditionsFloretC12setCondition_3foryAA0bF0VSg_SStF">setCondition(_:<wbr>for:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the host&rsquo;s own condition. <code>nil</code> makes it use the default.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setCondition</span><span class="p">(</span><span class="n">_</span> <span class="nv">condition</span><span class="p">:</span> <span class="kt"><a href="../Structs/NetworkCondition.html">NetworkCondition</a></span><span class="p">?,</span> <span class="k">for</span> <span class="nv">host</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework23NetworkConditionsFloretC17stopAllThrottlingyyF"></a>
+                    <a name="//apple_ref/swift/Method/stopAllThrottling()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework23NetworkConditionsFloretC17stopAllThrottlingyyF">stopAllThrottling()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the default and every host to &ldquo;No throttling&rdquo;. The hosts are kept.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopAllThrottling</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework23NetworkConditionsFloretC16activeThrottlingAA0B9ConditionVSg07defaultG0_SaySS4host_AF9conditiontG5hoststvp"></a>
+                    <a name="//apple_ref/swift/Property/activeThrottling" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework23NetworkConditionsFloretC16activeThrottlingAA0B9ConditionVSg07defaultG0_SaySS4host_AF9conditiontG5hoststvp">activeThrottling</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The hosts with a throttling condition, and the default if it throttles, e.g. for the Cauli menu.
+Hosts are in the order of <code><a href="../Classes/NetworkConditionsFloret.html#/s:14Cauliframework23NetworkConditionsFloretC5hostsSaySSGvp">hosts</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">activeThrottling</span><span class="p">:</span> <span class="p">(</span><span class="n"><a href="../Classes/NetworkConditionsFloret.html#/s:14Cauliframework23NetworkConditionsFloretC16defaultConditionAA0bF0Vvp">defaultCondition</a></span><span class="p">:</span> <span class="kt"><a href="../Structs/NetworkCondition.html">NetworkCondition</a></span><span class="p">?,</span> <span class="nv">hosts</span><span class="p">:</span> <span class="p">[(</span><span class="nv">host</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">condition</span><span class="p">:</span> <span class="kt"><a href="../Structs/NetworkCondition.html">NetworkCondition</a></span><span class="p">)])</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework23NetworkConditionsFloretC11descriptionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework23NetworkConditionsFloretC11descriptionSSSgvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>E.g. &ldquo;Throttling: api.example.com (Edge), all other hosts (3G)&rdquo;, shown in the Cauli menu.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Hosts"></a>
+                <a name="//apple_ref/swift/Section/Hosts" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Hosts"></a>
+                  <h3 class="section-name"><span>Hosts</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework23NetworkConditionsFloretC5hostsSaySSGvp"></a>
+                    <a name="//apple_ref/swift/Property/hosts" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework23NetworkConditionsFloretC5hostsSaySSGvp">hosts</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Every host the app connected to while the floret was enabled, the most recently used first,
+kept across app starts.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hosts</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework23NetworkConditionsFloretC6forget4hostySS_tF"></a>
+                    <a name="//apple_ref/swift/Method/forget(host:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework23NetworkConditionsFloretC6forget4hostySS_tF">forget(host:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Forgets the host and its condition.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">forget</span><span class="p">(</span><span class="nv">host</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/InterceptingFloret"></a>
+                <a name="//apple_ref/swift/Section/InterceptingFloret" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/InterceptingFloret"></a>
+                  <h3 class="section-name"><span>InterceptingFloret</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework23NetworkConditionsFloretC11willRequest_29modificationCompletionHandleryAA6RecordV_yAGctF"></a>
+                    <a name="//apple_ref/swift/Method/willRequest(_:modificationCompletionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework23NetworkConditionsFloretC11willRequest_29modificationCompletionHandleryAA6RecordV_yAGctF">willRequest(_:<wbr>modificationCompletionHandler:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remembers the host, then delays the request by the latency and upload time, or lets it fail.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">willRequest</span><span class="p">(</span><span class="n">_</span> <span class="nv">record</span><span class="p">:</span> <span class="kt"><a href="../Structs/Record.html">Record</a></span><span class="p">,</span> <span class="n">modificationCompletionHandler</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Structs/Record.html">Record</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework23NetworkConditionsFloretC10didRespond_29modificationCompletionHandleryAA6RecordV_yAGctF"></a>
+                    <a name="//apple_ref/swift/Method/didRespond(_:modificationCompletionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework23NetworkConditionsFloretC10didRespond_29modificationCompletionHandleryAA6RecordV_yAGctF">didRespond(_:<wbr>modificationCompletionHandler:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delays the response by the download time of its size.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didRespond</span><span class="p">(</span><span class="n">_</span> <span class="nv">record</span><span class="p">:</span> <span class="kt"><a href="../Structs/Record.html">Record</a></span><span class="p">,</span> <span class="n">modificationCompletionHandler</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Structs/Record.html">Record</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework23NetworkConditionsFloretC14viewControllerySo06UIViewF0CAA5CauliCF"></a>
+                    <a name="//apple_ref/swift/Method/viewController(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework23NetworkConditionsFloretC14viewControllerySo06UIViewF0CAA5CauliCF">viewController(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The conditions of all hosts the app connected to, and the default for all other hosts.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">viewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">cauli</span><span class="p">:</span> <span class="kt"><a href="../Classes/Cauli.html">Cauli</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIViewController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2026 <a class="link" href="https://cauli.works" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2026-11-25)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>

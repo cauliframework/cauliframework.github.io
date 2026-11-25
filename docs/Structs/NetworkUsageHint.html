@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NetworkUsageHint Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Struct/NetworkUsageHint" class="dashAnchor"></a>
+
+    <a title="NetworkUsageHint Structure Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Cauliframework 1.4 Docs
+        </a>
+         (98% documented)
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/cauliframework/cauli">
+            <img class="header-icon" src="../img/gh.png" alt="GitHub"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Cauliframework</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      <a class="breadcrumb" href="../Structs.html">Structures</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      NetworkUsageHint Structure Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../architecture.html">Architecture</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../configuring-cauli.html">Configuring Cauli</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../florets.html">Florets</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../frequently-asked-questions.html">Frequently Asked Questions</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../mockfloret.html">MockFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../writing-your-own-plugin.html">Writing Your Own Plugin</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Cauli.html">Cauli</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FindReplaceFloret.html">FindReplaceFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FindReplaceFloret/ReplaceDefinition.html">– ReplaceDefinition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HTTPBodyStreamFloret.html">HTTPBodyStreamFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/InspectorFloret.html">InspectorFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/InspectorFloret/RecordListFormattedData.html">– RecordListFormattedData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/InspectorFloretFormatter.html">InspectorFloretFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MapRemoteFloret.html">MapRemoteFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MockFloret.html">MockFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MockFloret/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MockFloret.html#/s:14Cauliframework10MockFloretC7MappingV">– Mapping</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetworkConditionsFloret.html">NetworkConditionsFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetworkUsageFloret.html">NetworkUsageFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NoCacheFloret.html">NoCacheFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SecurityAuditFloret.html">SecurityAuditFloret</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HTTPArchive.html">HTTPArchive</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/Result.html">Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SecurityAuditSeverity.html">SecurityAuditSeverity</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/StorageCapacity.html">StorageCapacity</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NSError.html">NSError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NSError/Cauli.html">– Cauli</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIWindow.html">UIWindow</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DisplayingFloret.html">DisplayingFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Floret.html">Floret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/InspectorFloretFormatterType.html">InspectorFloretFormatterType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/InterceptingFloret.html">InterceptingFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/NetworkUsageRule.html">NetworkUsageRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SecurityAuditRule.html">SecurityAuditRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Storage.html">Storage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CleartextHTTPRule.html">CleartextHTTPRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Configuration.html">Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ConnectionReuseRule.html">ConnectionReuseRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CredentialsOverHTTPRule.html">CredentialsOverHTTPRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DuplicateRequestRule.html">DuplicateRequestRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/EndpointUsage.html">EndpointUsage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HostUsage.html">HostUsage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/InsecureCookieRule.html">InsecureCookieRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/LargePayloadRule.html">LargePayloadRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/LegacyProtocolRule.html">LegacyProtocolRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Mapping.html">Mapping</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MappingLocation.html">MappingLocation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MappingLocation/Protocol.html">– Protocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MissingHSTSRule.html">MissingHSTSRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkCondition.html">NetworkCondition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkCondition/Failure.html">– Failure</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageHint.html">NetworkUsageHint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageHint/Severity.html">– Severity</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageSnapshot.html">NetworkUsageSnapshot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageTotals.html">NetworkUsageTotals</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageTransfer.html">NetworkUsageTransfer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NotCacheableRule.html">NotCacheableRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/OutdatedTLSRule.html">OutdatedTLSRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PersonalDataInURLRule.html">PersonalDataInURLRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Record.html">Record</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RecordModifier.html">RecordModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RecordSelector.html">RecordSelector</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Response.html">Response</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecretsInURLRule.html">SecretsInURLRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditExchange.html">SecurityAuditExchange</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditFinding.html">SecurityAuditFinding</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditFinding/Scope.html">– Scope</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditIgnoredFinding.html">SecurityAuditIgnoredFinding</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditIssue.html">SecurityAuditIssue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditIssue/Endpoint.html">– Endpoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ThirdPartyPersonalDataRule.html">ThirdPartyPersonalDataRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/TransferMetrics.html">TransferMetrics</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/UncompressedResponseRule.html">UncompressedResponseRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/UncompressedUploadRule.html">UncompressedUploadRule</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>NetworkUsageHint</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">NetworkUsageHint</span> <span class="p">:</span> <span class="kt">Equatable</span></code></pre>
+
+                </div>
+              </div>
+            <p>A finding of a <code><a href="../Protocols/NetworkUsageRule.html">NetworkUsageRule</a></code>: where the app could use less network, and how.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework16NetworkUsageHintV8SeverityO"></a>
+                    <a name="//apple_ref/swift/Enum/Severity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework16NetworkUsageHintV8SeverityO">Severity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>How important a hint is. Warnings are listed first.</p>
+
+                        <a href="../Structs/NetworkUsageHint/Severity.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Severity</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Comparable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework16NetworkUsageHintV14ruleIdentifierSSvp"></a>
+                    <a name="//apple_ref/swift/Property/ruleIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework16NetworkUsageHintV14ruleIdentifierSSvp">ruleIdentifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code>identifier</code> of the rule that found it.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">ruleIdentifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework16NetworkUsageHintV8severityAC8SeverityOvp"></a>
+                    <a name="//apple_ref/swift/Property/severity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework16NetworkUsageHintV8severityAC8SeverityOvp">severity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>How important the hint is.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">severity</span><span class="p">:</span> <span class="kt"><a href="../Structs/NetworkUsageHint/Severity.html">Severity</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework16NetworkUsageHintV5titleSSvp"></a>
+                    <a name="//apple_ref/swift/Property/title" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework16NetworkUsageHintV5titleSSvp">title</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>E.g. &ldquo;Uncompressed responses&rdquo;.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework16NetworkUsageHintV7summarySSvp"></a>
+                    <a name="//apple_ref/swift/Property/summary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework16NetworkUsageHintV7summarySSvp">summary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>One line about what was found, e.g. &ldquo;3 JSON endpoints, 1.1 MB without compression&rdquo;.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">summary</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework16NetworkUsageHintV17affectedEndpointsSayAA08EndpointC0VGvp"></a>
+                    <a name="//apple_ref/swift/Property/affectedEndpoints" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework16NetworkUsageHintV17affectedEndpointsSayAA08EndpointC0VGvp">affectedEndpoints</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The endpoints the hint is about, the most received bytes first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">affectedEndpoints</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/EndpointUsage.html">EndpointUsage</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework16NetworkUsageHintV20estimatedSavingBytess5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/estimatedSavingBytes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework16NetworkUsageHintV20estimatedSavingBytess5Int64VSgvp">estimatedSavingBytes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>How many bytes fixing it would likely save. <code>nil</code> if that can&rsquo;t be estimated.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">estimatedSavingBytes</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework16NetworkUsageHintV8howToFixSSvp"></a>
+                    <a name="//apple_ref/swift/Property/howToFix" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework16NetworkUsageHintV8howToFixSSvp">howToFix</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>What to change to fix it.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">howToFix</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework16NetworkUsageHintV14ruleIdentifier8severity5title7summary17affectedEndpoints20estimatedSavingBytes8howToFixACSS_AC8SeverityOS2SSayAA08EndpointC0VGs5Int64VSgSStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(ruleIdentifier:severity:title:summary:affectedEndpoints:estimatedSavingBytes:howToFix:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework16NetworkUsageHintV14ruleIdentifier8severity5title7summary17affectedEndpoints20estimatedSavingBytes8howToFixACSS_AC8SeverityOS2SSayAA08EndpointC0VGs5Int64VSgSStcfc">init(ruleIdentifier:<wbr>severity:<wbr>title:<wbr>summary:<wbr>affectedEndpoints:<wbr>estimatedSavingBytes:<wbr>howToFix:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a hint.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">ruleIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">severity</span><span class="p">:</span> <span class="kt"><a href="../Structs/NetworkUsageHint/Severity.html">Severity</a></span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">summary</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">affectedEndpoints</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/EndpointUsage.html">EndpointUsage</a></span><span class="p">],</span> <span class="nv">estimatedSavingBytes</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?,</span> <span class="nv">howToFix</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2026 <a class="link" href="https://cauli.works" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2026-11-25)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>

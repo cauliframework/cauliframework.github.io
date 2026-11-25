@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SecurityAuditFloret Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/SecurityAuditFloret" class="dashAnchor"></a>
+
+    <a title="SecurityAuditFloret Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Cauliframework 1.4 Docs
+        </a>
+         (98% documented)
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/cauliframework/cauli">
+            <img class="header-icon" src="../img/gh.png" alt="GitHub"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Cauliframework</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      <a class="breadcrumb" href="../Classes.html">Classes</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      SecurityAuditFloret Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../architecture.html">Architecture</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../configuring-cauli.html">Configuring Cauli</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../florets.html">Florets</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../frequently-asked-questions.html">Frequently Asked Questions</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../mockfloret.html">MockFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../writing-your-own-plugin.html">Writing Your Own Plugin</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Cauli.html">Cauli</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FindReplaceFloret.html">FindReplaceFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FindReplaceFloret/ReplaceDefinition.html">– ReplaceDefinition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HTTPBodyStreamFloret.html">HTTPBodyStreamFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/InspectorFloret.html">InspectorFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/InspectorFloret/RecordListFormattedData.html">– RecordListFormattedData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/InspectorFloretFormatter.html">InspectorFloretFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MapRemoteFloret.html">MapRemoteFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MockFloret.html">MockFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MockFloret/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MockFloret.html#/s:14Cauliframework10MockFloretC7MappingV">– Mapping</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetworkConditionsFloret.html">NetworkConditionsFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetworkUsageFloret.html">NetworkUsageFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NoCacheFloret.html">NoCacheFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SecurityAuditFloret.html">SecurityAuditFloret</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HTTPArchive.html">HTTPArchive</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/Result.html">Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SecurityAuditSeverity.html">SecurityAuditSeverity</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/StorageCapacity.html">StorageCapacity</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NSError.html">NSError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NSError/Cauli.html">– Cauli</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIWindow.html">UIWindow</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DisplayingFloret.html">DisplayingFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Floret.html">Floret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/InspectorFloretFormatterType.html">InspectorFloretFormatterType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/InterceptingFloret.html">InterceptingFloret</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/NetworkUsageRule.html">NetworkUsageRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SecurityAuditRule.html">SecurityAuditRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Storage.html">Storage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CleartextHTTPRule.html">CleartextHTTPRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Configuration.html">Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ConnectionReuseRule.html">ConnectionReuseRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CredentialsOverHTTPRule.html">CredentialsOverHTTPRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DuplicateRequestRule.html">DuplicateRequestRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/EndpointUsage.html">EndpointUsage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HostUsage.html">HostUsage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/InsecureCookieRule.html">InsecureCookieRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/LargePayloadRule.html">LargePayloadRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/LegacyProtocolRule.html">LegacyProtocolRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Mapping.html">Mapping</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MappingLocation.html">MappingLocation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MappingLocation/Protocol.html">– Protocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MissingHSTSRule.html">MissingHSTSRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkCondition.html">NetworkCondition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkCondition/Failure.html">– Failure</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageHint.html">NetworkUsageHint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageHint/Severity.html">– Severity</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageSnapshot.html">NetworkUsageSnapshot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageTotals.html">NetworkUsageTotals</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkUsageTransfer.html">NetworkUsageTransfer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NotCacheableRule.html">NotCacheableRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/OutdatedTLSRule.html">OutdatedTLSRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PersonalDataInURLRule.html">PersonalDataInURLRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Record.html">Record</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RecordModifier.html">RecordModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RecordSelector.html">RecordSelector</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Response.html">Response</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecretsInURLRule.html">SecretsInURLRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditExchange.html">SecurityAuditExchange</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditFinding.html">SecurityAuditFinding</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditFinding/Scope.html">– Scope</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditIgnoredFinding.html">SecurityAuditIgnoredFinding</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditIssue.html">SecurityAuditIssue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurityAuditIssue/Endpoint.html">– Endpoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ThirdPartyPersonalDataRule.html">ThirdPartyPersonalDataRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/TransferMetrics.html">TransferMetrics</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/UncompressedResponseRule.html">UncompressedResponseRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/UncompressedUploadRule.html">UncompressedUploadRule</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>SecurityAuditFloret</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">SecurityAuditFloret</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/InterceptingFloret.html">InterceptingFloret</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SecurityAuditFloret</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DisplayingFloret.html">DisplayingFloret</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>The SecurityAuditFloret checks every request Cauli intercepts for privacy and security problems,
+e.g. credentials sent over plain HTTP, tokens in URLs or insecure cookies.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">audit</span> <span class="o">=</span> <span class="kt">SecurityAuditFloret</span><span class="p">(</span><span class="nv">firstPartyHosts</span><span class="p">:</span> <span class="p">[</span><span class="s">"example.com"</span><span class="p">])</span>
+<span class="k">let</span> <span class="nv">cauli</span> <span class="o">=</span> <span class="kt">Cauli</span><span class="p">([</span><span class="kt">InspectorFloret</span><span class="p">(),</span> <span class="n">audit</span><span class="p">])</span>
+</code></pre>
+
+<p>Each problem comes from a <code><a href="../Protocols/SecurityAuditRule.html">SecurityAuditRule</a></code>. Add your own to <code>defaultRules</code>.
+Only URLs and headers are checked, not bodies. The floret counts from its creation until <code>reset()</code>.
+Ignored findings are kept across app starts.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework19SecurityAuditFloretC12defaultRulesSayAA0bC4Rule_pGvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/defaultRules" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework19SecurityAuditFloretC12defaultRulesSayAA0bC4Rule_pGvpZ">defaultRules</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The built-in rules.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">defaultRules</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/SecurityAuditRule.html">SecurityAuditRule</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework19SecurityAuditFloretC7enabledSbvp"></a>
+                    <a name="//apple_ref/swift/Property/enabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework19SecurityAuditFloretC7enabledSbvp">enabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If the floret is disabled, requests are not checked.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework19SecurityAuditFloretC5rulesSayAA0bC4Rule_pGvp"></a>
+                    <a name="//apple_ref/swift/Property/rules" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework19SecurityAuditFloretC5rulesSayAA0bC4Rule_pGvp">rules</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The rules every request is checked with.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">rules</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/SecurityAuditRule.html">SecurityAuditRule</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework19SecurityAuditFloretC5rules15firstPartyHosts12userDefaultsACSayAA0bC4Rule_pG_SaySSGSo06NSUserJ0Ctcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(rules:firstPartyHosts:userDefaults:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework19SecurityAuditFloretC5rules15firstPartyHosts12userDefaultsACSayAA0bC4Rule_pG_SaySSGSo06NSUserJ0Ctcfc">init(rules:<wbr>firstPartyHosts:<wbr>userDefaults:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates the floret.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">rules</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/SecurityAuditRule.html">SecurityAuditRule</a></span><span class="p">]</span> <span class="o">=</span> <span class="kt">SecurityAuditFloret</span><span class="o">.</span><span class="n"><a href="../Classes/SecurityAuditFloret.html#/s:14Cauliframework19SecurityAuditFloretC12defaultRulesSayAA0bC4Rule_pGvpZ">defaultRules</a></span><span class="p">,</span> <span class="nv">firstPartyHosts</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span> <span class="nv">userDefaults</span><span class="p">:</span> <span class="kt">UserDefaults</span> <span class="o">=</span> <span class="o">.</span><span class="n">standard</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rules</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The rules every request is checked with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>firstPartyHosts</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The app&rsquo;s own hosts, e.g. [&ldquo;example.com&rdquo;], which includes its subdomains.
+If set, personal data sent to any other host is reported by a <code><a href="../Structs/ThirdPartyPersonalDataRule.html">ThirdPartyPersonalDataRule</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userDefaults</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Where the ignored findings are kept across app starts.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Findings"></a>
+                <a name="//apple_ref/swift/Section/Findings" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Findings"></a>
+                  <h3 class="section-name"><span>Findings</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework19SecurityAuditFloretC6issuesSayAA0bC5IssueVGvp"></a>
+                    <a name="//apple_ref/swift/Property/issues" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework19SecurityAuditFloretC6issuesSayAA0bC5IssueVGvp">issues</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The problems found since the floret was created or reset, the most serious first.
+Ignored endpoints are left out, and an issue without other endpoints too.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">issues</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/SecurityAuditIssue.html">SecurityAuditIssue</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework19SecurityAuditFloretC15checkedRequestsSivp"></a>
+                    <a name="//apple_ref/swift/Property/checkedRequests" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework19SecurityAuditFloretC15checkedRequestsSivp">checkedRequests</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>How many requests were checked since the floret was created or reset.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">checkedRequests</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework19SecurityAuditFloretC16checkedHostCountSivp"></a>
+                    <a name="//apple_ref/swift/Property/checkedHostCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework19SecurityAuditFloretC16checkedHostCountSivp">checkedHostCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>How many hosts the checked requests went to.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">checkedHostCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework19SecurityAuditFloretC5start10Foundation4DateVvp"></a>
+                    <a name="//apple_ref/swift/Property/start" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework19SecurityAuditFloretC5start10Foundation4DateVvp">start</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When the floret was created or reset.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">start</span><span class="p">:</span> <span class="kt">Date</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework19SecurityAuditFloretC5resetyyF"></a>
+                    <a name="//apple_ref/swift/Method/reset()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework19SecurityAuditFloretC5resetyyF">reset()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Forgets all findings and starts counting again. Ignored findings stay ignored.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reset</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework19SecurityAuditFloretC11descriptionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework19SecurityAuditFloretC11descriptionSSSgvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>E.g. &ldquo;1 critical finding, 3 warnings, 2 info&rdquo;, shown in the Cauli menu.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Ignoring"></a>
+                <a name="//apple_ref/swift/Section/Ignoring" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Ignoring"></a>
+                  <h3 class="section-name"><span>Ignoring</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework19SecurityAuditFloretC15ignoredFindingsSayAA0bC14IgnoredFindingVGvp"></a>
+                    <a name="//apple_ref/swift/Property/ignoredFindings" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework19SecurityAuditFloretC15ignoredFindingsSayAA0bC14IgnoredFindingVGvp">ignoredFindings</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The findings ignored for an endpoint, the most recently ignored first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">ignoredFindings</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/SecurityAuditIgnoredFinding.html">SecurityAuditIgnoredFinding</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework19SecurityAuditFloretC6ignoreyyAA0bC5IssueVF"></a>
+                    <a name="//apple_ref/swift/Method/ignore(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework19SecurityAuditFloretC6ignoreyyAA0bC5IssueVF">ignore(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ignores the issue for all its endpoints. New endpoints with the same problem are still reported.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ignore</span><span class="p">(</span><span class="n">_</span> <span class="nv">issue</span><span class="p">:</span> <span class="kt"><a href="../Structs/SecurityAuditIssue.html">SecurityAuditIssue</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework19SecurityAuditFloretC12stopIgnoringyyAA0bC14IgnoredFindingVF"></a>
+                    <a name="//apple_ref/swift/Method/stopIgnoring(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework19SecurityAuditFloretC12stopIgnoringyyAA0bC14IgnoredFindingVF">stopIgnoring(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reports the finding again.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopIgnoring</span><span class="p">(</span><span class="n">_</span> <span class="nv">finding</span><span class="p">:</span> <span class="kt"><a href="../Structs/SecurityAuditIgnoredFinding.html">SecurityAuditIgnoredFinding</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/InterceptingFloret"></a>
+                <a name="//apple_ref/swift/Section/InterceptingFloret" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/InterceptingFloret"></a>
+                  <h3 class="section-name"><span>InterceptingFloret</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework19SecurityAuditFloretC11willRequest_29modificationCompletionHandleryAA6RecordV_yAGctF"></a>
+                    <a name="//apple_ref/swift/Method/willRequest(_:modificationCompletionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework19SecurityAuditFloretC11willRequest_29modificationCompletionHandleryAA6RecordV_yAGctF">willRequest(_:<wbr>modificationCompletionHandler:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Passes the request on unchanged.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">willRequest</span><span class="p">(</span><span class="n">_</span> <span class="nv">record</span><span class="p">:</span> <span class="kt"><a href="../Structs/Record.html">Record</a></span><span class="p">,</span> <span class="n">modificationCompletionHandler</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Structs/Record.html">Record</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework19SecurityAuditFloretC10didRespond_29modificationCompletionHandleryAA6RecordV_yAGctF"></a>
+                    <a name="//apple_ref/swift/Method/didRespond(_:modificationCompletionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework19SecurityAuditFloretC10didRespond_29modificationCompletionHandleryAA6RecordV_yAGctF">didRespond(_:<wbr>modificationCompletionHandler:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Checks the request and its response, then passes the response on unchanged.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didRespond</span><span class="p">(</span><span class="n">_</span> <span class="nv">record</span><span class="p">:</span> <span class="kt"><a href="../Structs/Record.html">Record</a></span><span class="p">,</span> <span class="n">modificationCompletionHandler</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Structs/Record.html">Record</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14Cauliframework19SecurityAuditFloretC14viewControllerySo06UIViewF0CAA5CauliCF"></a>
+                    <a name="//apple_ref/swift/Method/viewController(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14Cauliframework19SecurityAuditFloretC14viewControllerySo06UIViewF0CAA5CauliCF">viewController(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The findings, the most serious first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">viewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">cauli</span><span class="p">:</span> <span class="kt"><a href="../Classes/Cauli.html">Cauli</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIViewController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2026 <a class="link" href="https://cauli.works" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2026-11-25)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>
